@@ -4,10 +4,9 @@
 public class PlayerSettings : ScriptableObject
 {
     [SerializeField] private float _speed;
-    [SerializeField] private float _smoothness;
+    [SerializeField] private float _interactionDistance;
 
     public float Speed => _speed * Time.deltaTime;
-    public float Smoothness => _smoothness;
+    public float InteractionDistance => _interactionDistance;
 
-    public float InteractionDistance = 2;
 }

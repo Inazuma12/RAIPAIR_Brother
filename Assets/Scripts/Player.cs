@@ -12,7 +12,11 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        transform.eulerAngles = new Vector3(0, Mathf.Atan2(controller.VerticalAxis, controller.HorizontalAxis) * 180 / Mathf.PI, 0);
+        if (controller.HorizontalAxis != 0 && controller.VerticalAxis != 0)
+        {
+            transform.eulerAngles = new Vector3(0, Mathf.Atan2(controller.HorizontalAxis, controller.VerticalAxis) * 180f / Mathf.PI, 0);
+            transform.position += transform.forward * settings.Speed;
+        }
     }
 
     private void OnCollisionStay(Collision collision)

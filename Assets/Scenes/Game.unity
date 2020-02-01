@@ -1290,12 +1290,12 @@ PrefabInstance:
     - target: {fileID: 804133955, guid: 78c5c49b712e8fa44a0a635151762445, type: 3}
       propertyPath: controller
       value: 
-      objectReference: {fileID: 11400000, guid: cad83894a5a10904395f22ecc55deec9,
+      objectReference: {fileID: 11400000, guid: ba643ed12bda45b4fafce007a4aa8eb0,
         type: 2}
     - target: {fileID: 8715738287209621691, guid: 78c5c49b712e8fa44a0a635151762445,
         type: 3}
       propertyPath: m_IsKinematic
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8715738287209621691, guid: 78c5c49b712e8fa44a0a635151762445,
         type: 3}

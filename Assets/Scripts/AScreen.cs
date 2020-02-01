@@ -1,18 +1,23 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
+public delegate void AScreenEventHandler(AScreen sender);
 public class AScreen : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public Animator animator;
+    [SerializeField] private Button nxtBtn;
+    public event AScreenEventHandler nxtScreen;
+    public Animator nxtAnimator;
+
+    virtual protected void Start()
     {
-        
+        nxtBtn.onClick.AddListener(nextScreen);
     }
 
-    // Update is called once per frame
-    void Update()
+    protected void nextScreen()
     {
-        
+        nxtScreen?.Invoke(this);
     }
 }

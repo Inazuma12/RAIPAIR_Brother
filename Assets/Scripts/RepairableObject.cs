@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-<<<<<<< HEAD
 public enum State
 {
     REPAIR,
@@ -10,10 +9,7 @@ public enum State
     BROKEN
 }
 
-public class RepairableObject : MonoBehaviour
-=======
 public class RepairableObject : PickableObject
->>>>>>> 1f10505fb94045189ef7e1001128c62fa874a24f
 {
     [SerializeField] private RepairRecipe baseRecipe;
     private List<int> _recipeToDo;

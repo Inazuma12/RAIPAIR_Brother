@@ -4,15 +4,25 @@ using UnityEngine;
 
 public class UiManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private List<AScreen> allScreen;
+
+    private void Start()
     {
-        
+        foreach (var item in allScreen)
+        {
+            item.nxtScreen += Item_nxtScreen;
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Item_nxtScreen(AScreen sender)
     {
-        
+        sender.animator.SetBool("GoOut", true);
+        sender.animator.SetBool("GoIn", false);
+        sender.animator.SetBool("Idle", false);
+
+        sender.nxtAnimator.SetBool("GoOut", false);
+        sender.nxtAnimator.SetBool("GoIn", true);
+        sender.nxtAnimator.SetBool("Idle", true);
+
     }
 }

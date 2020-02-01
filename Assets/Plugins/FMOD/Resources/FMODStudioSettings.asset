@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: FMODStudioSettings
   m_EditorClassIdentifier: 
   SwitchSettingsMigration: 1
-  HasSourceProject: 1
-  HasPlatforms: 1
+  HasSourceProject: 0
+  HasPlatforms: 0
   sourceProjectPath: ../../../PROJECT_FMOD/GGJ_2020/GGJ_2020_FMOD_Project/GGJ_2020_FMOD_Project.fspro
-  sourceBankPath: ..\..\..\PROJECT_FMOD\GGJ_2020\GGJ_2020_FMOD_Project\Build
+  sourceBankPath: Assets\Sound
   SourceBankPathUnformatted: 
   AutomaticEventLoading: 1
   BankLoadType: 0

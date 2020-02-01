@@ -1,9 +1,11 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StorageBlock : PickUpDipositeBlock
+public class DiagBlock : PickUpDipositeBlock
 {
+    // Start is called before the first frame update
     public override PickableObject PickUp()
     {
         if (ownPickableObject == null) return null;
@@ -19,7 +21,14 @@ public class StorageBlock : PickUpDipositeBlock
         {
             ownPickableObject = pickableObject;
             ownPickableObject.transform.SetParent(transform);
+            PrintRecipe(pickableObject);
         }
     }
 
+    private void PrintRecipe(PickableObject pickableObject)
+    {
+        Debug.Log(pickableObject.GetComponent<RepairableObject>().RecipeToDo[0]);
+        Debug.Log(pickableObject.GetComponent<RepairableObject>().RecipeToDo[1]);
+        Debug.Log(pickableObject.GetComponent<RepairableObject>().RecipeToDo[2]);
+    }
 }

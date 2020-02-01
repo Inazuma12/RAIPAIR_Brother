@@ -22,7 +22,7 @@ public class Player : MonoBehaviour
         {
             m_pickableObject = value;
             if (m_pickableObject)
-                m_pickableObject.transform.parent = transform;
+                m_pickableObject.transform.SetParent(transform);
         }
     }
 
@@ -78,12 +78,18 @@ public class Player : MonoBehaviour
 
             if (pickUpDipositeBlock)
             {
-                PickableObject pickableObject = pickUpBlock.PickUp();
+                PickableObject pickableObject = pickUpDipositeBlock.PickUp();
                 if (pickableObject)
+                {
                     PickableObject = pickableObject;
+                    return;
+                }
 
                 if (PickableObject)
-                    dipositeBlock.Diposide(PickableObject);
+                {
+                    PickableObject.transform.SetParent(null);
+                    pickUpDipositeBlock.Diposide(PickableObject);
+                }
             }
         }
     }

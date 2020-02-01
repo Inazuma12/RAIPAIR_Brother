@@ -15,9 +15,9 @@ MonoBehaviour:
   _repairSprite: {fileID: 0}
   _toRepaireSprite: {fileID: 0}
   _destorySprite: {fileID: 0}
-  _item1: 0
-  _item2: 0
-  _item3: 0
-  _item1probability: 0
-  _item2probability: 0
+  _item1: 3
+  _item2: 4
+  _item3: 5
+  _item1probability: 0.5
+  _item2probability: 0.7
   _item3probability: 1

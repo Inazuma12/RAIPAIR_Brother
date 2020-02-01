@@ -1,12 +1,6 @@
 fileFormatVersion: 2
-<<<<<<< HEAD:Assets/Prefabs/Objects.meta
-guid: ee76000793ce16848b5195704b529642
+guid: 6ac48afcd50a2ea4d8d3f7688dd2c5d2
 folderAsset: yes
-=======
-guid: 8d9ac371a89871941a014b7d0ba6f3c1
-labels:
-- FMOD
->>>>>>> 029e512d03ccdba675e9abdbcec676fbda0308b4:Assets/StreamingAssets/Master.strings.bank.meta
 DefaultImporter:
   externalObjects: {}
   userData: 

@@ -317,14 +317,14 @@ PrefabInstance:
       propertyPath: Orientation1
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3819669743464550030, guid: b6bcc3f512193aa4c903bc67c951bbc0,
-        type: 3}
-      propertyPath: m_IsKinematic
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8094205831074790197, guid: b6bcc3f512193aa4c903bc67c951bbc0,
         type: 3}
       propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3819669743464550030, guid: b6bcc3f512193aa4c903bc67c951bbc0,
+        type: 3}
+      propertyPath: m_IsKinematic
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -716,14 +716,14 @@ PrefabInstance:
       propertyPath: Orientation1
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3819669743464550030, guid: b6bcc3f512193aa4c903bc67c951bbc0,
-        type: 3}
-      propertyPath: m_IsKinematic
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8094205831074790197, guid: b6bcc3f512193aa4c903bc67c951bbc0,
         type: 3}
       propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3819669743464550030, guid: b6bcc3f512193aa4c903bc67c951bbc0,
+        type: 3}
+      propertyPath: m_IsKinematic
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -1588,23 +1588,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 804133957, guid: 78c5c49b712e8fa44a0a635151762445, type: 3}
-      propertyPath: m_IsTrigger
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 804133955, guid: 78c5c49b712e8fa44a0a635151762445, type: 3}
-      propertyPath: controller
-      value: 
-      objectReference: {fileID: 11400000, guid: ba643ed12bda45b4fafce007a4aa8eb0,
-        type: 2}
-    - target: {fileID: 804133955, guid: 78c5c49b712e8fa44a0a635151762445, type: 3}
-      propertyPath: myRigidbody
-      value: 
-      objectReference: {fileID: 740682509}
-    - target: {fileID: 804133955, guid: 78c5c49b712e8fa44a0a635151762445, type: 3}
-      propertyPath: debug
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8715738287209621691, guid: 78c5c49b712e8fa44a0a635151762445,
         type: 3}
       propertyPath: m_IsKinematic
@@ -1633,6 +1616,23 @@ PrefabInstance:
     - target: {fileID: 8715738287209621691, guid: 78c5c49b712e8fa44a0a635151762445,
         type: 3}
       propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 804133957, guid: 78c5c49b712e8fa44a0a635151762445, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 804133955, guid: 78c5c49b712e8fa44a0a635151762445, type: 3}
+      propertyPath: controller
+      value: 
+      objectReference: {fileID: 11400000, guid: ba643ed12bda45b4fafce007a4aa8eb0,
+        type: 2}
+    - target: {fileID: 804133955, guid: 78c5c49b712e8fa44a0a635151762445, type: 3}
+      propertyPath: myRigidbody
+      value: 
+      objectReference: {fileID: 740682509}
+    - target: {fileID: 804133955, guid: 78c5c49b712e8fa44a0a635151762445, type: 3}
+      propertyPath: debug
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -3141,23 +3141,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 804133957, guid: 78c5c49b712e8fa44a0a635151762445, type: 3}
-      propertyPath: m_IsTrigger
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 804133955, guid: 78c5c49b712e8fa44a0a635151762445, type: 3}
-      propertyPath: controller
-      value: 
-      objectReference: {fileID: 11400000, guid: cad83894a5a10904395f22ecc55deec9,
-        type: 2}
-    - target: {fileID: 804133955, guid: 78c5c49b712e8fa44a0a635151762445, type: 3}
-      propertyPath: myRigidbody
-      value: 
-      objectReference: {fileID: 1756424570}
-    - target: {fileID: 804133955, guid: 78c5c49b712e8fa44a0a635151762445, type: 3}
-      propertyPath: debug
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8715738287209621691, guid: 78c5c49b712e8fa44a0a635151762445,
         type: 3}
       propertyPath: m_IsKinematic
@@ -3188,6 +3171,63 @@ PrefabInstance:
       propertyPath: m_CollisionDetection
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 804133957, guid: 78c5c49b712e8fa44a0a635151762445, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 804133955, guid: 78c5c49b712e8fa44a0a635151762445, type: 3}
+      propertyPath: m_sprites.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 804133955, guid: 78c5c49b712e8fa44a0a635151762445, type: 3}
+      propertyPath: controller
+      value: 
+      objectReference: {fileID: 11400000, guid: cad83894a5a10904395f22ecc55deec9,
+        type: 2}
+    - target: {fileID: 804133955, guid: 78c5c49b712e8fa44a0a635151762445, type: 3}
+      propertyPath: myRigidbody
+      value: 
+      objectReference: {fileID: 1756424570}
+    - target: {fileID: 804133955, guid: 78c5c49b712e8fa44a0a635151762445, type: 3}
+      propertyPath: debug
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 804133955, guid: 78c5c49b712e8fa44a0a635151762445, type: 3}
+      propertyPath: m_sprites.Array.data[0]
+      value: 
+      objectReference: {fileID: -1128852787405669674, guid: a2e89e3136447c94e97289571d263f11,
+        type: 3}
+    - target: {fileID: 804133955, guid: 78c5c49b712e8fa44a0a635151762445, type: 3}
+      propertyPath: m_sprites.Array.data[1]
+      value: 
+      objectReference: {fileID: -6444837062041178502, guid: a2e89e3136447c94e97289571d263f11,
+        type: 3}
+    - target: {fileID: 804133955, guid: 78c5c49b712e8fa44a0a635151762445, type: 3}
+      propertyPath: m_sprites.Array.data[2]
+      value: 
+      objectReference: {fileID: 2149490824375803558, guid: a2e89e3136447c94e97289571d263f11,
+        type: 3}
+    - target: {fileID: 804133955, guid: 78c5c49b712e8fa44a0a635151762445, type: 3}
+      propertyPath: m_sprites.Array.data[3]
+      value: 
+      objectReference: {fileID: -3957759789842324969, guid: a2e89e3136447c94e97289571d263f11,
+        type: 3}
+    - target: {fileID: 804133955, guid: 78c5c49b712e8fa44a0a635151762445, type: 3}
+      propertyPath: m_sprites.Array.data[4]
+      value: 
+      objectReference: {fileID: -311295070178498950, guid: a2e89e3136447c94e97289571d263f11,
+        type: 3}
+    - target: {fileID: 804133955, guid: 78c5c49b712e8fa44a0a635151762445, type: 3}
+      propertyPath: m_sprites.Array.data[5]
+      value: 
+      objectReference: {fileID: -168369627858598779, guid: a2e89e3136447c94e97289571d263f11,
+        type: 3}
+    - target: {fileID: 657551744601896033, guid: 78c5c49b712e8fa44a0a635151762445,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1128852787405669674, guid: a2e89e3136447c94e97289571d263f11,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 78c5c49b712e8fa44a0a635151762445, type: 3}
 --- !u!4 &1756424569 stripped

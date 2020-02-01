@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6076eaef6be1f2e40a87b4c497a0f515, type: 3}
   m_Name: Lampe
   m_EditorClassIdentifier: 
-  _repairSprite: {fileID: 0}
+  _repairSprite: {fileID: 21300000, guid: ebfa6801b98144746a9e43113b0fdb94, type: 3}
   _toRepaireSprite: {fileID: 0}
   _destorySprite: {fileID: 0}
   _item1: 1

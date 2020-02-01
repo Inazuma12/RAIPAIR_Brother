@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Colle
   m_EditorClassIdentifier: 
   repairObject: 2
-  sprite: {fileID: 21300000, guid: a429e3f6bbdaa324096d3c686d69e70b, type: 3}
+  sprite: {fileID: 21300000, guid: e72e9f0ee2914a441a96efe493c2c83b, type: 3}
   price: 1
   color: {r: 0.9811321, g: 0.5507298, b: 0.5507298, a: 1}

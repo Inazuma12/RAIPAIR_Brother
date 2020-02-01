@@ -10,6 +10,7 @@ public class Player : MonoBehaviour
     [SerializeField] bool debug;
     private Block blockToToInteract;
     private PickableObject m_pickableObject;
+    public List<Sprite> m_sprites = new List<Sprite>();
 
     public PickableObject PickableObject
     {

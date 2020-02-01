@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Engrenage
   m_EditorClassIdentifier: 
   repairObject: 3
-  sprite: {fileID: 21300000, guid: a429e3f6bbdaa324096d3c686d69e70b, type: 3}
+  sprite: {fileID: 21300000, guid: 1dc9ce4b7cd7dc54aa24c12094f56b56, type: 3}
   price: 1
   color: {r: 0.20754719, g: 0.08321468, b: 0.08321468, a: 1}

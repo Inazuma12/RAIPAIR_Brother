@@ -15,22 +15,10 @@ enum Type
     DIAGNOSTIC
 }
 
-public enum Orientation
-{
-    LEFT,
-    RIGHT,
-    UP,
-    DOWN,
-    MIDDLE,
-    NONE
-}
-
 public class Block : MonoBehaviour
 {
     [SerializeField]
     Type _type = Type.EMPTY;
-    
-    public Orientation Orientation1 = Orientation.NONE;
 
     public virtual void OnInteract(Player player)
     {

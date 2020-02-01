@@ -47,28 +47,6 @@ public class Player : MonoBehaviour
                 horizontalAxis = 0;
             }
 
-            Debug.Log(verticalAxis);
-            Debug.Log(horizontalAxis);
-
-            /*  if(horizontalAxis > -0.5 && horizontalAxis < 0.5f)
-              {
-                  if (verticalAxis <= 0)
-                      horizontalAxis = -1;
-                  else
-                      horizontalAxis = 1;
-              }
-
-              else if (verticalAxis >= -0.5 && verticalAxis <= 0.5f)
-              {
-                  if (horizontalAxis >= 0)
-                      verticalAxis = 1;
-                  else
-                      verticalAxis = -1;
-
-
-              }
-              */
-
             transform.eulerAngles = new Vector3(0, Mathf.Atan2(horizontalAxis, -verticalAxis) * Mathf.Rad2Deg, 0);
             
             //transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(0, Mathf.Atan2(controller.HorizontalAxis, controller.VerticalAxis) * Mathf.Rad2Deg, 0), settings.Smoothness);

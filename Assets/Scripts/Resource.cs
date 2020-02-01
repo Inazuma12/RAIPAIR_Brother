@@ -5,5 +5,11 @@ using UnityEngine;
 public class Resource : PickableObject
 {
     [SerializeField]
-    RepairRecipe repairRecipe;
+    ResourceInfo resourceInfo;
+
+    private void OnValidate()
+    {
+        if (resourceInfo && spriteRenderer)
+            spriteRenderer.sprite = resourceInfo.Sprite;
+    }
 }

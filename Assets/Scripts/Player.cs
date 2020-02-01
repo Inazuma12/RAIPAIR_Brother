@@ -11,35 +11,80 @@ public class Player : MonoBehaviour
     private Block blockToToInteract;
     private PickableObject m_pickableObject;
 
-    public PickableObject PickableObject { get => m_pickableObject; set => m_pickableObject = value; }
+    public PickableObject PickableObject
+    {
+        get
+        {
+            return m_pickableObject;
+        }
+
+        set
+        {
+            m_pickableObject = value;
+            if (m_pickableObject)
+                m_pickableObject.transform.parent = transform;
+        }
+    }
+
+    public float horizontalAxis;
+    public float verticalAxis;
 
     // Update is called once per frame
     void FixedUpdate()
     {
         if (controller.HorizontalAxis != 0 || controller.VerticalAxis != 0)
         {
+
+             horizontalAxis = controller.HorizontalAxis;
+             verticalAxis = controller.VerticalAxis;
+            var tmp = new Vector3(horizontalAxis, 0, verticalAxis);
+            if (Mathf.Abs(horizontalAxis) > Mathf.Abs(verticalAxis))
+            {
+                verticalAxis = 0;
+            }
+            else
+            {
+                horizontalAxis = 0;
+            }
+
+            transform.eulerAngles = new Vector3(0, Mathf.Atan2(horizontalAxis, -verticalAxis) * Mathf.Rad2Deg, 0);
+            
             //transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(0, Mathf.Atan2(controller.HorizontalAxis, controller.VerticalAxis) * Mathf.Rad2Deg, 0), settings.Smoothness);
-            myRigidbody.velocity += transform.forward * settings.Speed;
+            myRigidbody.velocity = transform.forward * settings.Speed;
         }
 
         ComputeRaycast();
 
-        if(blockToToInteract && controller.PickUpBtn)
+        if (blockToToInteract && controller.PickUpBtn)
         {
             blockToToInteract.OnInteract(this);
 
-            IPickUp IPickUp = blockToToInteract.GetComponent<IPickUp>();
-            IDiposide IDiposide = blockToToInteract.GetComponent<IDiposide>();
+            PickUpBlock pickUpBlock = blockToToInteract.GetComponent<PickUpBlock>();
+            DipositeBlock dipositeBlock = blockToToInteract.GetComponent<DipositeBlock>();
+            PickUpDipositeBlock pickUpDipositeBlock = blockToToInteract.GetComponent<PickUpDipositeBlock>();
 
-            if(IPickUp != null)
+            if (pickUpBlock)
             {
-                PickableObject pickableObject = null;
+                PickableObject pickableObject = pickUpBlock.PickUp();
                 if (pickableObject)
-                    PickableObject = IPickUp.PickUp();
+                    PickableObject = pickableObject;
             }
 
-            if(IDiposide != null && PickableObject != null)
-                IDiposide.Diposide(PickableObject);
+            if (dipositeBlock)
+            {
+                if (PickableObject)
+                    dipositeBlock.Diposide(PickableObject);
+            }
+
+            if (pickUpDipositeBlock)
+            {
+                PickableObject pickableObject = pickUpBlock.PickUp();
+                if (pickableObject)
+                    PickableObject = pickableObject;
+
+                if (PickableObject)
+                    dipositeBlock.Diposide(PickableObject);
+            }
         }
     }
 

@@ -9,9 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e7342856f4e80f489ecd63bd9997d38, type: 3}
-  m_Name: P2Controller
+  m_Script: {fileID: 11500000, guid: d5d2e35ad0af5104a8edc2e97d9a716d, type: 3}
+  m_Name: Colle
   m_EditorClassIdentifier: 
-  _horizontalAxis: Horizontale
-  _verticalAxis: Verticale
-  _pickUpBtn: Interacte
+  repairObject: 2
+  sprite: {fileID: 21300000, guid: a429e3f6bbdaa324096d3c686d69e70b, type: 3}
+  price: 1
+  color: {r: 0.9811321, g: 0.5507298, b: 0.5507298, a: 1}

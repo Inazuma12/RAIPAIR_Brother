@@ -25,6 +25,8 @@ public class RepairableObject : PickableObject
     void Start()
     {
         _recipeToDo = new List<int>() { 0,0,0};
+        _piecesAlreadyPut = new List<int>();
+
         if (Random.value > 0.5)
         {
             _recipeToDo[0] = (int)baseRecipe.Item1;

@@ -15,7 +15,7 @@ MonoBehaviour:
   Path: event:/FX_boing_1
   guid: 62f13679aa27364291bec16d77279f9f
   Banks:
-  - {fileID: 6373208228313978817}
+  - {fileID: 405418388578570658}
   IsStream: 0
   Is3D: 1
   IsOneShot: 0
@@ -57,7 +57,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: Assets/Sound/Master.strings.bank
   SubDir: 
-  lastModified: 637161404939388401
+  lastModified: 637161404762569006
   LoadResult: 0
   FileSizes:
   - Name: 
@@ -77,16 +77,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: -1791721505205825028}
-  - {fileID: 6373208228313978817}
+  - {fileID: 405418388578570658}
   EditorEvents:
   - {fileID: -4002762465413621849}
   EditorParameters: []
   MasterBanks:
-  - {fileID: 6373208228313978817}
+  - {fileID: 405418388578570658}
   StringsBanks:
   - {fileID: -1791721505205825028}
-  stringsBankWriteTime: 637161404939388401
+  stringsBankWriteTime: 637161404762569006
   cacheVersion: 3
+--- !u!114 &405418388578570658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Sound/Master.bank
+  SubDir: 
+  lastModified: 637161404762569006
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &1117011151761825774
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -122,7 +140,7 @@ MonoBehaviour:
   lastModified: 637161404939378523
   LoadResult: 0
   FileSizes: []
-  Exists: 1
+  Exists: 0
 --- !u!114 &6734196795078770534
 MonoBehaviour:
   m_ObjectHideFlags: 0

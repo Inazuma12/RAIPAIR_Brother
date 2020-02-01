@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _horizontalAxis: Horizontale
   _verticalAxis: Verticale
+  _interact: Interacte

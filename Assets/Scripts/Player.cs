@@ -8,6 +8,8 @@ public class Player : MonoBehaviour
     [SerializeField] private PlayerSettings settings;
     [SerializeField] private Rigidbody myRigidbody;
     [SerializeField] bool debug;
+    [SerializeField] SpriteRenderer spriteRenderer;
+    [SerializeField] Transform forward;
     private Block blockToToInteract;
     private PickableObject m_pickableObject;
     public List<Sprite> m_sprites = new List<Sprite>();
@@ -48,11 +50,47 @@ public class Player : MonoBehaviour
                 horizontalAxis = 0;
             }
 
-            transform.eulerAngles = new Vector3(0, Mathf.Atan2(horizontalAxis, -verticalAxis) * Mathf.Rad2Deg, 0);
-            
+            forward.transform.eulerAngles = new Vector3(0, Mathf.Atan2(horizontalAxis, -verticalAxis) * Mathf.Rad2Deg, 0);
+
+            if (forward.eulerAngles.y == 270)
+            {
+                if(!PickableObject)
+                spriteRenderer.sprite = m_sprites[1];
+                else
+                    spriteRenderer.sprite = m_sprites[2];
+                spriteRenderer.flipX = true;
+            }
+            else
+            {
+                spriteRenderer.flipX = false;
+                if (forward.eulerAngles.y == 90)
+                {
+                    if (!PickableObject)
+                        spriteRenderer.sprite = m_sprites[1];
+                   else
+                        spriteRenderer.sprite = m_sprites[2];
+                }
+                if (forward.eulerAngles.y == 180)
+                {
+                    if (!PickableObject)
+                        spriteRenderer.sprite = m_sprites[3];
+                    else
+                        spriteRenderer.sprite = m_sprites[0];
+                }
+                if (forward.eulerAngles.y == 0)
+                {
+                    if (!PickableObject)
+                        spriteRenderer.sprite = m_sprites[5];
+                    else
+                        spriteRenderer.sprite = m_sprites[4];
+                }
+            }
+
             //transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(0, Mathf.Atan2(controller.HorizontalAxis, controller.VerticalAxis) * Mathf.Rad2Deg, 0), settings.Smoothness);
-            myRigidbody.velocity = transform.forward * settings.Speed;
+            myRigidbody.velocity = forward.forward * settings.Speed;
         }
+        else
+            myRigidbody.velocity = Vector3.zero;
 
         ComputeRaycast();
 
@@ -99,7 +137,7 @@ public class Player : MonoBehaviour
     {
         Color color = Color.green;
 
-        Ray ray = new Ray(transform.position, transform.forward );
+        Ray ray = new Ray(transform.position, forward.forward );
         RaycastHit raycastHit;
         Physics.Raycast(ray,out raycastHit, settings.InteractionDistance);
         if (raycastHit.collider)
@@ -120,7 +158,7 @@ public class Player : MonoBehaviour
             blockToToInteract = null;
 
         if (debug)
-            Debug.DrawRay(transform.position, transform.forward* settings.InteractionDistance, color);
+            Debug.DrawRay(transform.position, forward.forward* settings.InteractionDistance, color);
 
     }
 }

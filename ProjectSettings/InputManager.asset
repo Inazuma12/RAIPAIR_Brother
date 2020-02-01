@@ -70,6 +70,7 @@ InputManager:
     axis: 0
     joyNum: 0
   - serializedVersion: 3
+<<<<<<< HEAD
     m_Name: Fire3
     descriptiveName: 
     descriptiveNegativeName: 
@@ -235,6 +236,13 @@ InputManager:
     descriptiveNegativeName: 
     negativeButton: 
     positiveButton: joystick button 3
+=======
+    m_Name: Interact
+    descriptiveName: 
+    descriptiveNegativeName: 
+    negativeButton: 
+    positiveButton: joystick 1 button 0
+>>>>>>> 029e512d03ccdba675e9abdbcec676fbda0308b4
     altNegativeButton: 
     altPositiveButton: 
     gravity: 1000
@@ -244,6 +252,7 @@ InputManager:
     invert: 0
     type: 0
     axis: 0
+<<<<<<< HEAD
     joyNum: 0
   - serializedVersion: 3
     m_Name: Submit
@@ -283,6 +292,15 @@ InputManager:
     descriptiveNegativeName: 
     negativeButton: 
     positiveButton: escape
+=======
+    joyNum: 1
+  - serializedVersion: 3
+    m_Name: Interacte
+    descriptiveName: 
+    descriptiveNegativeName: 
+    negativeButton: 
+    positiveButton: joystick 2 button 0
+>>>>>>> 029e512d03ccdba675e9abdbcec676fbda0308b4
     altNegativeButton: 
     altPositiveButton: joystick button 1
     gravity: 1000
@@ -292,4 +310,4 @@ InputManager:
     invert: 0
     type: 0
     axis: 0
-    joyNum: 0
+    joyNum: 1

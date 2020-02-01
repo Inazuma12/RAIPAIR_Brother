@@ -7,6 +7,8 @@ public class Player : MonoBehaviour
     [SerializeField] private PlayerController controller;
     [SerializeField] private PlayerSettings settings;
     [SerializeField] private Rigidbody myRigidbody;
+    [SerializeField] bool debug;
+    private Block blockToToInteract;
 
 
     // Update is called once per frame
@@ -17,39 +19,37 @@ public class Player : MonoBehaviour
             transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(0, Mathf.Atan2(controller.HorizontalAxis, controller.VerticalAxis) * Mathf.Rad2Deg, 0), settings.Smoothness);
             myRigidbody.velocity += transform.forward * settings.Speed;
         }
+
+        ComputeRaycast();
+
+        if(blockToToInteract && controller.Interact)
+        {
+            blockToToInteract.OnInteract(this);
+        }
     }
 
-    private void OnCollisionStay(Collision collision)
+    void ComputeRaycast()
     {
-     /*   float pen = 0;
-        Vector3 normal = new Vector3();
-        foreach (var item in collision.contacts)
+        Color color = Color.green;
+
+        Ray ray = new Ray(transform.position, transform.forward );
+        RaycastHit raycastHit;
+        Physics.Raycast(ray,out raycastHit, settings.InteractionDistance);
+        if (raycastHit.collider)
         {
-            if (item.separation < 0 && item.separation > -1) pen += item.separation;
-            normal += item.normal;
+           
+            Block block = raycastHit.collider.GetComponent<Block>();
+            if (block)
+            {
+                color = Color.red;
+                blockToToInteract = block;
+            }
         }
-        //Debug.Log(pen);
-        transform.position -= normal.normalized * pen * settings.Speed;*/
+        else
+            blockToToInteract = null;
+
+        if (debug)
+            Debug.DrawRay(transform.position, transform.forward* settings.InteractionDistance, color);
+
     }
-
-    /*private void OnCollisionEnter(Collision collision)
-    {
-        int count = collision.contactCount;
-
-        for (int i = 0; i < count; i++)
-        {
-            penetration += collision.GetContact(i).separation;
-            normal += collision.GetContact(i).normal * penetration;
-            
-        }
-        normal = normal.normalized;
-        
-    }*/
-
-    /*private void OnCollisionExit(Collision collision)
-    {
-        normal = new Vector3();
-        penetration = 0;
-    }*/
-
 }

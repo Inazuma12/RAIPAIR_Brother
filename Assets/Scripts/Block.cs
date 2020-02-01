@@ -32,4 +32,9 @@ public class Block : MonoBehaviour
     
     public Orientation Orientation1 = Orientation.NONE;
 
+    public void OnInteract(Player player)
+    {
+
+    }
+
 }

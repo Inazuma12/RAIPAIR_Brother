@@ -8,8 +8,6 @@ public class PickUpBlock : Block
     [SerializeField]
     protected PickableObject ownPickableObject = null;
 
-   
-
     public override void OnInteract(Player player)
     {
     }

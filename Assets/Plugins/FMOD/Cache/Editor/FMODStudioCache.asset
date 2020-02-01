@@ -1,6 +1,10 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+<<<<<<< HEAD
 --- !u!114 &-8101011961846631220
+=======
+--- !u!114 &-4564816011622128224
+>>>>>>> master
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9,6 +13,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
+<<<<<<< HEAD
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
   m_Name: event:/SFX/SFX_Glue_Pick_Up
   m_EditorClassIdentifier: 
@@ -47,6 +52,18 @@ MonoBehaviour:
   MaxDistance: 0
   Length: 1176
 --- !u!114 &-6026256411140181688
+=======
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Sound/Master.bank
+  SubDir: 
+  lastModified: 637161460982697595
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &-4002762465413621849
+>>>>>>> master
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -56,6 +73,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+<<<<<<< HEAD
   m_Name: event:/SFX/SFX_Gearing_Pick_Up
   m_EditorClassIdentifier: 
   Path: event:/SFX/SFX_Gearing_Pick_Up
@@ -70,6 +88,22 @@ MonoBehaviour:
   MaxDistance: 0
   Length: 2000
 --- !u!114 &-4468415060156985415
+=======
+  m_Name: event:/FX_boing_1
+  m_EditorClassIdentifier: 
+  Path: event:/FX_boing_1
+  guid: 62f13679aa27364291bec16d77279f9f
+  Banks:
+  - {fileID: -2057870422403215140}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2252
+--- !u!114 &-3342872005853420445
+>>>>>>> master
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -78,6 +112,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
+<<<<<<< HEAD
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
   m_Name: event:/SFX/SFX_Order_Droped
   m_EditorClassIdentifier: 
@@ -93,6 +128,20 @@ MonoBehaviour:
   MaxDistance: 0
   Length: 2061
 --- !u!114 &-4378406222199039024
+=======
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: ../../../PROJECT_FMOD/GGJ_2020/GGJ_2020_FMOD_Project/Build/Desktop/Master.strings.bank
+  SubDir: 
+  lastModified: 637161040082126995
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 736
+  Exists: 1
+--- !u!114 &-2057870422403215140
+>>>>>>> master
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -101,6 +150,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
+<<<<<<< HEAD
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
   m_Name: event:/SFX/SFX_Electronic_circuit_Droped
   m_EditorClassIdentifier: 
@@ -116,6 +166,18 @@ MonoBehaviour:
   MaxDistance: 0
   Length: 2000
 --- !u!114 &-4233992741350321269
+=======
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Sound/Master.bank
+  SubDir: 
+  lastModified: 637161483749375141
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &-1791721505205825028
+>>>>>>> master
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -124,6 +186,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
+<<<<<<< HEAD
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
   m_Name: event:/SFX/SFX_Electronic_circuit_Pick_Up
   m_EditorClassIdentifier: 
@@ -322,6 +385,19 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 697
+=======
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Sound/Master.strings.bank
+  SubDir: 
+  lastModified: 637161483749375141
+  LoadResult: 0
+  FileSizes:
+  - Name: 
+    Value: 736
+  Exists: 1
+>>>>>>> master
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -335,6 +411,7 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
+<<<<<<< HEAD
   - {fileID: 1415740081527025808}
   - {fileID: 1232718864890956122}
   EditorEvents:
@@ -395,6 +472,20 @@ MonoBehaviour:
   MaxDistance: 0
   Length: 2000
 --- !u!114 &1232718864890956122
+=======
+  - {fileID: -1791721505205825028}
+  - {fileID: -2057870422403215140}
+  EditorEvents:
+  - {fileID: -4002762465413621849}
+  EditorParameters: []
+  MasterBanks:
+  - {fileID: -2057870422403215140}
+  StringsBanks:
+  - {fileID: -1791721505205825028}
+  stringsBankWriteTime: 637161483749375141
+  cacheVersion: 3
+--- !u!114 &405418388578570658
+>>>>>>> master
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -408,11 +499,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: Assets/Sound/Master.bank
   SubDir: 
+<<<<<<< HEAD
   lastModified: 637161742173135975
   LoadResult: 0
   FileSizes: []
   Exists: 1
 --- !u!114 &1415740081527025808
+=======
+  lastModified: 637161404762569006
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &1117011151761825774
+>>>>>>> master
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -422,6 +521,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+<<<<<<< HEAD
   m_Name: bank:/Master.strings.bank
   m_EditorClassIdentifier: 
   Path: Assets/Sound/Master.strings.bank
@@ -456,6 +556,17 @@ MonoBehaviour:
   MaxDistance: 0
   Length: 4665
 --- !u!114 &3576183929874747454
+=======
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../../../PROJECT_FMOD/GGJ_2020/GGJ_2020_FMOD_Project/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637161040082057187
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &6373208228313978817
+>>>>>>> master
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -464,6 +575,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
+<<<<<<< HEAD
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
   m_Name: event:/SFX/SFX_Repair
   m_EditorClassIdentifier: 
@@ -502,6 +614,18 @@ MonoBehaviour:
   MaxDistance: 0
   Length: 1664
 --- !u!114 &3781016158081728087
+=======
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Sound/Master.bank
+  SubDir: 
+  lastModified: 637161404939378523
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &6734196795078770534
+>>>>>>> master
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -510,6 +634,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
+<<<<<<< HEAD
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
   m_Name: event:/SFX/SFX_Buy_New_ressource
   m_EditorClassIdentifier: 
@@ -525,6 +650,18 @@ MonoBehaviour:
   MaxDistance: 0
   Length: 1532
 --- !u!114 &4600218383879831709
+=======
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../../../PROJECT_FMOD/GGJ_2020/GGJ_2020_FMOD_Project/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637161020992154467
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &7808304550696336535
+>>>>>>> master
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -534,6 +671,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+<<<<<<< HEAD
   m_Name: event:/UI/UI_Play
   m_EditorClassIdentifier: 
   Path: event:/UI/UI_Play
@@ -594,6 +732,22 @@ MonoBehaviour:
   MaxDistance: 0
   Length: 2000
 --- !u!114 &6198329308697867189
+=======
+  m_Name: event:/FX_boing_1
+  m_EditorClassIdentifier: 
+  Path: event:/FX_boing_1
+  guid: 62f13679aa27364291bec16d77279f9f
+  Banks:
+  - {fileID: 1117011151761825774}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2252
+--- !u!114 &8535833280039830518
+>>>>>>> master
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -602,6 +756,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
+<<<<<<< HEAD
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
   m_Name: event:/SFX/SFX_Happy_Client
   m_EditorClassIdentifier: 
@@ -685,3 +840,14 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 697
+=======
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Sound/Master.bank
+  SubDir: 
+  lastModified: 637161404762569006
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+>>>>>>> master

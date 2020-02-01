@@ -4,19 +4,21 @@ using UnityEngine;
 
 public class PickUpDipositeBlock : Block
 {
+    [SerializeField]
+    protected PickableObject ownPickableObject = null;
     public override void OnInteract(Player player)
     {
     }
 
 
-    PickableObject PickUp()
+    virtual public PickableObject PickUp()
     {
         return null;
     }
 
-    void Diposide(PickableObject pickableObject)
+    virtual public void Diposide(PickableObject pickableObject)
     {
-
+        
     }
 
 }

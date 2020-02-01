@@ -3,14 +3,10 @@
 
 public class RepairRecipe : ScriptableObject
 {
-    public enum RepairObject
-    {
-        CLOU = 1,
-        COLLE = 2,
-        ENGRENAGE = 3,
-        FIL = 4,
-        CIRCUIT = 5,
-    };
+    [SerializeField] Sprite _repairSprite = null;
+    [SerializeField] Sprite _toRepaireSprite = null;
+    [SerializeField] Sprite _destorySprite = null;
+
 
     [SerializeField] private RepairObject _item1;
     [SerializeField] private RepairObject _item2;

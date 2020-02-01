@@ -1,12 +1,5 @@
 fileFormatVersion: 2
-<<<<<<< HEAD:Assets/Prefabs/Blocks.meta
-guid: 5fef86441e529bf4ea9b59e2db6b60f9
-folderAsset: yes
-=======
 guid: 8869e2199cf7259468077200b3e027db
-labels:
-- FMOD
->>>>>>> 029e512d03ccdba675e9abdbcec676fbda0308b4:Assets/StreamingAssets/Master.bank.meta
 DefaultImporter:
   externalObjects: {}
   userData: 

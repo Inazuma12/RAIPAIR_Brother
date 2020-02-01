@@ -12,23 +12,52 @@ public class GameManager : MonoBehaviour
     [SerializeField] private float moneyLoss;
     [SerializeField] private GameObject EntryDesk;
     [SerializeField] private GameObject ExitDesk;
+    [SerializeField] static GameManager m_instance;
 
     public event GameManagerEventHandler OnMoneyUpdated;
     public event GameManagerEventHandler OnScoreUpdated;
     public event GameManagerEventHandler OnLose;
 
+    [SerializeField]
     private float _money;
     private float _score;
     private float elapsedTime;
     private float elapsedTime2;
 
-    public float Money => _money;
+    public float Money
+    {
+        get
+        {
+            return _money;
+        }
+
+        set
+        {
+            _money = value;
+        }
+    }
+
     public float Score => _score;
 
+    public static GameManager Instance
+    {
+        get
+        {
+            return m_instance;
+        }
+    }
+
+    private void Awake()
+    {
+        m_instance = this;
+    }
 
     // Update is called once per frame
     void Update()
     {
+        if (repairableObjects.Count == 0)
+            return;
+
         elapsedTime += Time.deltaTime;
         elapsedTime2 += Time.deltaTime;
 

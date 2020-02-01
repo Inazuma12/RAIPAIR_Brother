@@ -2,18 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public interface IDiposide
-{
-    void Diposide(PickableObject pickableObject);
-}
 
-public class DipositeBlock : Block , IDiposide
+
+public class DipositeBlock : Block 
 {
     public override void OnInteract(Player player)
     {
     }
 
-    void IDiposide.Diposide(PickableObject pickableObject)
+    public virtual void Diposide(PickableObject pickableObject)
     {
         
     }

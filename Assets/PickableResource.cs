@@ -5,11 +5,16 @@ using UnityEngine;
 public class PickableResource : PickableObject
 {
     [SerializeField]
-    ResourcesData resourcesData;
+    ResourceInfo resourcesData;
+
+    public ResourceInfo ResourcesData { get => resourcesData; set => resourcesData = value; }
 
     private void OnValidate()
     {
-        if (resourcesData && spriteRenderer)
-            spriteRenderer.sprite = resourcesData.Sprite;
+        if (ResourcesData && spriteRenderer)
+        {
+            spriteRenderer.sprite = ResourcesData.Sprite;
+            spriteRenderer.color = resourcesData.Color;
+        }
     }
 }

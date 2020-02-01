@@ -2,22 +2,24 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public interface IPickUp
-{
-    PickableObject PickUp();
-}
 
-public class PickUpBlock : Block , IPickUp
+public class PickUpBlock : Block 
 {
-    public IPickUp PickUpBase => this;
+    [SerializeField]
+    protected PickableObject ownPickableObject = null;
+
+   
 
     public override void OnInteract(Player player)
     {
     }
 
-    PickableObject IPickUp.PickUp()
+    public virtual PickableObject PickUp()
     {
-        return null;
+        PickableObject pickableObject = ownPickableObject;
+        ownPickableObject = null;
+        return pickableObject;
+
     }
 
 }

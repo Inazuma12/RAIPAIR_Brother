@@ -15,7 +15,7 @@ MonoBehaviour:
   Path: event:/SFX/SFX_Cant_Drop_Object
   guid: eb37835b4225ec4cb5cd7239fcea3603
   Banks:
-  - {fileID: -406322862578851816}
+  - {fileID: -4468641317130514896}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -37,7 +37,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: Assets/Sound/Master.strings.bank
   SubDir: 
-  lastModified: 637161742172866701
+  lastModified: 637161895347460288
   LoadResult: 0
   FileSizes:
   - Name: 
@@ -58,7 +58,7 @@ MonoBehaviour:
   Path: event:/SFX/SFX_Gearing_Droped
   guid: cedbf6173db4f44c82f81c3546dacb69
   Banks:
-  - {fileID: -406322862578851816}
+  - {fileID: -4468641317130514896}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -81,7 +81,7 @@ MonoBehaviour:
   Path: event:/SFX/SFX_New_Order
   guid: fbafb08b8bf7964b894c59a9368714e3
   Banks:
-  - {fileID: -406322862578851816}
+  - {fileID: -4468641317130514896}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -104,7 +104,7 @@ MonoBehaviour:
   Path: event:/SFX/SFX_Buy_New_ressource
   guid: dc8cf944a2f37f4793f1966a2ec63940
   Banks:
-  - {fileID: -406322862578851816}
+  - {fileID: -4468641317130514896}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -130,6 +130,24 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 1
+--- !u!114 &-4468641317130514896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Sound/Master.bank
+  SubDir: 
+  lastModified: 637161895347330625
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &-4040693886604169375
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -145,7 +163,7 @@ MonoBehaviour:
   Path: event:/SFX/SFX_Gearing_Pick_Up
   guid: f7b40470572c2b438e090d1a66c643dc
   Banks:
-  - {fileID: -406322862578851816}
+  - {fileID: -4468641317130514896}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -168,7 +186,7 @@ MonoBehaviour:
   Path: event:/SFX/SFX_Cables_Pick_Up
   guid: 656baefe205ba642a5b40f27d96b13b2
   Banks:
-  - {fileID: -406322862578851816}
+  - {fileID: -4468641317130514896}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -191,7 +209,7 @@ MonoBehaviour:
   Path: event:/SFX/SFX_Glue_Droped
   guid: 0faa4db0fe11414d9f0393abd35f7037
   Banks:
-  - {fileID: -406322862578851816}
+  - {fileID: -4468641317130514896}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -214,7 +232,7 @@ MonoBehaviour:
   Path: event:/SFX/SFX_Screw_Droped
   guid: 57d68a242e5cdc4f9e090707611972fc
   Banks:
-  - {fileID: -406322862578851816}
+  - {fileID: -4468641317130514896}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -237,7 +255,7 @@ MonoBehaviour:
   Path: event:/SFX/SFX_Diagnostic
   guid: 116bafa79e997148881c9ea2d0afa9f1
   Banks:
-  - {fileID: -406322862578851816}
+  - {fileID: -4468641317130514896}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -260,7 +278,7 @@ MonoBehaviour:
   Path: event:/UI/UI_Play
   guid: f5b285515a68df4d9c87006dae62e998
   Banks:
-  - {fileID: -406322862578851816}
+  - {fileID: -4468641317130514896}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -283,7 +301,7 @@ MonoBehaviour:
   Path: event:/SFX/SFX_Angry_Client
   guid: 45c3bb724344e546a73a91fa09405f28
   Banks:
-  - {fileID: -406322862578851816}
+  - {fileID: -4468641317130514896}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -306,7 +324,7 @@ MonoBehaviour:
   Path: event:/SFX/SFX_Repair
   guid: 943ba5928837ac4db487b38d6f2be4b0
   Banks:
-  - {fileID: -406322862578851816}
+  - {fileID: -4468641317130514896}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -331,7 +349,7 @@ MonoBehaviour:
   lastModified: 637161742173135975
   LoadResult: 0
   FileSizes: []
-  Exists: 1
+  Exists: 0
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -346,7 +364,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: -8282333721022636287}
-  - {fileID: -406322862578851816}
+  - {fileID: -4468641317130514896}
   EditorEvents:
   - {fileID: -3639487015716463421}
   - {fileID: -1428568185681036172}
@@ -376,10 +394,10 @@ MonoBehaviour:
   - {fileID: -7021963593269186186}
   EditorParameters: []
   MasterBanks:
-  - {fileID: -406322862578851816}
+  - {fileID: -4468641317130514896}
   StringsBanks:
   - {fileID: -8282333721022636287}
-  stringsBankWriteTime: 637161742172866701
+  stringsBankWriteTime: 637161895347460288
   cacheVersion: 3
 --- !u!114 &678533572577129044
 MonoBehaviour:
@@ -396,7 +414,7 @@ MonoBehaviour:
   Path: event:/SFX/SFX_Electronic_circuit_Droped
   guid: d3a5419ac0bd774fa1571e4d9392f747
   Banks:
-  - {fileID: -406322862578851816}
+  - {fileID: -4468641317130514896}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -419,7 +437,7 @@ MonoBehaviour:
   Path: event:/SFX/SFX_Screw_Pick_Up
   guid: 7d4117b95a232e4795c5d0ac392dfb52
   Banks:
-  - {fileID: -406322862578851816}
+  - {fileID: -4468641317130514896}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -442,7 +460,7 @@ MonoBehaviour:
   Path: event:/SFX/SFX_Cables_Droped
   guid: ecb914cd4a9d064d9111def87ffc4b19
   Banks:
-  - {fileID: -406322862578851816}
+  - {fileID: -4468641317130514896}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -465,7 +483,7 @@ MonoBehaviour:
   Path: event:/SFX/SFX_Litter
   guid: e03ff4e0c1c0074aa4d15af3bbb7bd34
   Banks:
-  - {fileID: -406322862578851816}
+  - {fileID: -4468641317130514896}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -488,7 +506,7 @@ MonoBehaviour:
   Path: event:/FOLEY/FOL_Footstep
   guid: 707e76f71b030f4a94b1948fabefa199
   Banks:
-  - {fileID: -406322862578851816}
+  - {fileID: -4468641317130514896}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -511,7 +529,7 @@ MonoBehaviour:
   Path: event:/SFX/SFX_Happy_Client
   guid: 3667ecb2d25d9d4d914f043f488481d5
   Banks:
-  - {fileID: -406322862578851816}
+  - {fileID: -4468641317130514896}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -534,7 +552,7 @@ MonoBehaviour:
   Path: event:/AMB/AMB_In_Store
   guid: 51bb87dc4a8d4841b36985a861119181
   Banks:
-  - {fileID: -406322862578851816}
+  - {fileID: -4468641317130514896}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -557,7 +575,7 @@ MonoBehaviour:
   Path: event:/UI/UI_Select
   guid: 34a9bb6bfdaec144b5e4ecce06887fec
   Banks:
-  - {fileID: -406322862578851816}
+  - {fileID: -4468641317130514896}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -580,7 +598,7 @@ MonoBehaviour:
   Path: event:/SFX/SFX_Electronic_circuit_Pick_Up
   guid: 5893385aff1f1d4792d3abca114f8a43
   Banks:
-  - {fileID: -406322862578851816}
+  - {fileID: -4468641317130514896}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -603,7 +621,7 @@ MonoBehaviour:
   Path: event:/UI/UI_Break
   guid: f5f6e590da80bd4298cf8d4b9e63b8e4
   Banks:
-  - {fileID: -406322862578851816}
+  - {fileID: -4468641317130514896}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -626,7 +644,7 @@ MonoBehaviour:
   Path: event:/SFX/SFX_Order_Droped
   guid: dc8a79dba45a8a40a0e72cc30a63b7bf
   Banks:
-  - {fileID: -406322862578851816}
+  - {fileID: -4468641317130514896}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -649,7 +667,7 @@ MonoBehaviour:
   Path: event:/SFX/SFX_Glue_Pick_Up
   guid: 620abfb935ea3047b149c21e0523149b
   Banks:
-  - {fileID: -406322862578851816}
+  - {fileID: -4468641317130514896}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -672,7 +690,7 @@ MonoBehaviour:
   Path: event:/SFX/SFX_Impact_Hit
   guid: 427cd980918cfc4a997df58232c0aa75
   Banks:
-  - {fileID: -406322862578851816}
+  - {fileID: -4468641317130514896}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -695,7 +713,7 @@ MonoBehaviour:
   Path: event:/SFX/SFX_Medium_Client
   guid: 4ca72ca97b1a9c44b3e52ace2c04bae5
   Banks:
-  - {fileID: -406322862578851816}
+  - {fileID: -4468641317130514896}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1

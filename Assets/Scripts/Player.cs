@@ -9,7 +9,9 @@ public class Player : MonoBehaviour
     [SerializeField] private Rigidbody myRigidbody;
     [SerializeField] bool debug;
     private Block blockToToInteract;
+    private PickableObject m_pickableObject;
 
+    public PickableObject PickableObject { get => m_pickableObject; set => m_pickableObject = value; }
 
     // Update is called once per frame
     void FixedUpdate()
@@ -25,6 +27,19 @@ public class Player : MonoBehaviour
         if(blockToToInteract && controller.PickUpBtn)
         {
             blockToToInteract.OnInteract(this);
+
+            IPickUp IPickUp = blockToToInteract.GetComponent<IPickUp>();
+            IDiposide IDiposide = blockToToInteract.GetComponent<IDiposide>();
+
+            if(IPickUp != null)
+            {
+                PickableObject pickableObject = null;
+                if (pickableObject)
+                    PickableObject = IPickUp.PickUp();
+            }
+
+            if(IDiposide != null && PickableObject != null)
+                IDiposide.Diposide(PickableObject);
         }
     }
 
@@ -37,11 +52,15 @@ public class Player : MonoBehaviour
         Physics.Raycast(ray,out raycastHit, settings.InteractionDistance);
         if (raycastHit.collider)
         {
-           
+
             Block block = raycastHit.collider.GetComponent<Block>();
+           
             if (block)
             {
+
+
                 color = Color.red;
+
                 blockToToInteract = block;
             }
         }

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RepairableObject : MonoBehaviour
+public class RepairableObject : PickableObject
 {
     [SerializeField] private RepairRecipe baseRecipe;
     private List<int> _recipeToDo;

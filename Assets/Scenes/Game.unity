@@ -1216,6 +1216,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 703511733}
   m_PrefabAsset: {fileID: 0}
+--- !u!54 &740682509 stripped
+Rigidbody:
+  m_CorrespondingSourceObject: {fileID: 8715738287209621691, guid: 78c5c49b712e8fa44a0a635151762445,
+    type: 3}
+  m_PrefabInstance: {fileID: 890035805}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &890035805
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1292,10 +1298,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: ba643ed12bda45b4fafce007a4aa8eb0,
         type: 2}
+    - target: {fileID: 804133955, guid: 78c5c49b712e8fa44a0a635151762445, type: 3}
+      propertyPath: myRigidbody
+      value: 
+      objectReference: {fileID: 740682509}
     - target: {fileID: 8715738287209621691, guid: 78c5c49b712e8fa44a0a635151762445,
         type: 3}
       propertyPath: m_IsKinematic
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8715738287209621691, guid: 78c5c49b712e8fa44a0a635151762445,
         type: 3}
@@ -1305,12 +1315,22 @@ PrefabInstance:
     - target: {fileID: 8715738287209621691, guid: 78c5c49b712e8fa44a0a635151762445,
         type: 3}
       propertyPath: m_AngularDrag
-      value: 0.05
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8715738287209621691, guid: 78c5c49b712e8fa44a0a635151762445,
         type: 3}
       propertyPath: m_UseGravity
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715738287209621691, guid: 78c5c49b712e8fa44a0a635151762445,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 112
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715738287209621691, guid: 78c5c49b712e8fa44a0a635151762445,
+        type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 78c5c49b712e8fa44a0a635151762445, type: 3}

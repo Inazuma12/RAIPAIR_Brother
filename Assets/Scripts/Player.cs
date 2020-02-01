@@ -6,6 +6,7 @@ public class Player : MonoBehaviour
 {
     [SerializeField] private PlayerController controller;
     [SerializeField] private PlayerSettings settings;
+    [SerializeField] private Rigidbody myRigidbody;
 
     private Vector3 velocity;
 
@@ -15,13 +16,14 @@ public class Player : MonoBehaviour
         if (controller.HorizontalAxis != 0 || controller.VerticalAxis != 0)
         {
             transform.eulerAngles = new Vector3(0, Mathf.Atan2(controller.HorizontalAxis, controller.VerticalAxis) * 180f / Mathf.PI, 0);
-            transform.position += transform.forward * settings.Speed;
+            myRigidbody.velocity += transform.forward * settings.Speed;
+            // transform.position += transform.forward * settings.Speed;
         }
     }
 
     private void OnCollisionStay(Collision collision)
     {
-        float pen = 0;
+     /*   float pen = 0;
         Vector3 normal = new Vector3();
         foreach (var item in collision.contacts)
         {
@@ -29,7 +31,7 @@ public class Player : MonoBehaviour
             normal += item.normal;
         }
         //Debug.Log(pen);
-        transform.position -= normal.normalized * pen * settings.Speed;
+        transform.position -= normal.normalized * pen * settings.Speed;*/
     }
 
     /*private void OnCollisionEnter(Collision collision)

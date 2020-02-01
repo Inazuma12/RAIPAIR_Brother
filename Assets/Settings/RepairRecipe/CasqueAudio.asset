@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6076eaef6be1f2e40a87b4c497a0f515, type: 3}
   m_Name: CasqueAudio
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   _repairSprite: {fileID: 0}
   _toRepaireSprite: {fileID: 0}
   _destorySprite: {fileID: 0}
@@ -20,4 +21,14 @@ MonoBehaviour:
   _item3: 4
   _item1probability: 0.1
   _item2probability: 0.5
+=======
+  _repairSprite: {fileID: 21300000, guid: a429e3f6bbdaa324096d3c686d69e70b, type: 3}
+  _toRepaireSprite: {fileID: 21300000, guid: a429e3f6bbdaa324096d3c686d69e70b, type: 3}
+  _destorySprite: {fileID: 21300000, guid: a429e3f6bbdaa324096d3c686d69e70b, type: 3}
+  _item1: 0
+  _item2: 0
+  _item3: 0
+  _item1probability: 0
+  _item2probability: 0
+>>>>>>> a79b387e0ceb4164969258fb0ac7887b8c1c68d4
   _item3probability: 1

@@ -22,5 +22,8 @@ public class RepairRecipe : ScriptableObject
     public float Item1Probability => _item1probability;
     public float Item2Probability => _item2probability;
     public float Item3Probability => _item3probability;
-    
+
+    public Sprite RepairSprite { get => _repairSprite; set => _repairSprite = value; }
+    public Sprite ToRepaireSprite { get => _toRepaireSprite; set => _toRepaireSprite = value; }
+    public Sprite DestorySprite { get => _destorySprite; set => _destorySprite = value; }
 }

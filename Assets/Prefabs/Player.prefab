@@ -61,6 +61,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controller: {fileID: 11400000, guid: cad83894a5a10904395f22ecc55deec9, type: 2}
   settings: {fileID: 11400000, guid: be4c663b1edd25e43ac806b8715066b2, type: 2}
+  myRigidbody: {fileID: 0}
+  debug: 0
+  horizontalAxis: 0
+  verticalAxis: 0
 --- !u!54 &8715738287209621691
 Rigidbody:
   m_ObjectHideFlags: 0

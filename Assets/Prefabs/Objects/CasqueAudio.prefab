@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 8386122068563658861}
-  baseRecipe: {fileID: 11400000, guid: c140778dd08bdf14eac415d94545b1bb, type: 2}
+  baseRecipe: {fileID: 11400000, guid: 0651671200ad84e4093ab5e02445e02e, type: 2}
   state: 0
 --- !u!1 &2054215960308887743
 GameObject:

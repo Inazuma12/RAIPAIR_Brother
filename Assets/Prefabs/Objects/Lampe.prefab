@@ -124,5 +124,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 101531954118880225}
-  baseRecipe: {fileID: 11400000, guid: 0841f0cb25fbab14f8f9f3afa26fb935, type: 2}
+  baseRecipe: {fileID: 11400000, guid: 1825dc2d6c6caf7408d67707e9b0bf45, type: 2}
   state: 0

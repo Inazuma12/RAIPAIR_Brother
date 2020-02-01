@@ -21,6 +21,7 @@ public enum Orientation
     RIGHT,
     UP,
     DOWN,
+    MIDDLE,
     NONE
 }
 
@@ -30,7 +31,5 @@ public class Block : MonoBehaviour
     Type _type = Type.EMPTY;
     
     public Orientation Orientation1 = Orientation.NONE;
-
-    public Orientation Orientation2 = Orientation.NONE;
 
 }

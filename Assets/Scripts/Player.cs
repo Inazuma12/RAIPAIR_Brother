@@ -8,72 +8,44 @@ public class Player : MonoBehaviour
     [SerializeField] private PlayerSettings settings;
 
     private Vector3 velocity;
-    private bool isMobile = true;
-    
-    private bool isleft = true;
-    private bool isRight = true;
-    private bool isUp = true;
-    private bool isDown = true;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        if (isMobile) velocity = new Vector3(controller.HorizontalAxis * settings.Speed, 0, controller.VerticalAxis * settings.Speed);
-        else if (!isMobile && isleft && controller.HorizontalAxis > 0) velocity = new Vector3(controller.HorizontalAxis * settings.Speed, 0, 0);
-        else if (!isMobile && isRight && controller.HorizontalAxis < 0) velocity = new Vector3(controller.HorizontalAxis * settings.Speed, 0, 0);
-        else if (!isMobile && isUp && controller.VerticalAxis < 0)
-        {
-            velocity = new Vector3(0, 0, controller.VerticalAxis * settings.Speed);
-        }
-        else if (!isMobile && isDown && controller.VerticalAxis > 0)
-        {
-            velocity = new Vector3(0, 0, controller.VerticalAxis * settings.Speed);
-        }
-        else velocity = new Vector3();
-
-        Debug.Log(controller.VerticalAxis);
-        transform.position += velocity;
+        transform.eulerAngles = new Vector3(0, Mathf.Atan2(controller.VerticalAxis, controller.HorizontalAxis) * 180 / Mathf.PI, 0);
     }
 
-    private void OnTriggerEnter(Collider other) 
+    private void OnCollisionStay(Collision collision)
     {
-        Block collider;
-        isMobile = false;
+        float pen = 0;
+        Vector3 normal = new Vector3();
+        foreach (var item in collision.contacts)
+        {
+            if (item.separation < 0 && item.separation > -1) pen += item.separation;
+            normal += item.normal;
+        }
+        //Debug.Log(pen);
+        transform.position -= normal.normalized * pen * settings.Speed;
+    }
+
+    /*private void OnCollisionEnter(Collision collision)
+    {
+        int count = collision.contactCount;
+
+        for (int i = 0; i < count; i++)
+        {
+            penetration += collision.GetContact(i).separation;
+            normal += collision.GetContact(i).normal * penetration;
+            
+        }
+        normal = normal.normalized;
         
-        if(other.CompareTag("Block"))
-        {
-            collider = other.gameObject.GetComponent<Block>();
-            
-            isleft = collider.Orientation1 == Orientation.LEFT ? true : false;
-            
-            isRight = collider.Orientation1 == Orientation.RIGHT ? true : false;
-            
-            isUp = collider.Orientation1 == Orientation.UP ? true : false;
-           
-            isDown = collider.Orientation1 == Orientation.DOWN ? true : false;
+    }*/
 
-            if (collider.Orientation2 != Orientation.NONE)
-            {
-                isUp = collider.Orientation2 == Orientation.UP ? true : false;
-                isDown = collider.Orientation2 == Orientation.DOWN ? true : false;
-            }
-
-
-        }
-    }
-
-    private void OnTriggerExit(Collider other)
+    /*private void OnCollisionExit(Collision collision)
     {
-        isMobile = true;
-        isleft = false;
-        isRight = false;
-        isUp = false;
-        isDown = false;
-    }
+        normal = new Vector3();
+        penetration = 0;
+    }*/
+
 }

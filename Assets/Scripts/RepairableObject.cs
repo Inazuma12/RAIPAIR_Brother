@@ -18,6 +18,8 @@ public class RepairableObject : PickableObject
     private List<int> _piecesAlreadyPut;
 
     public State state;
+    private bool broken;
+
     public List<int> RecipeToDo => _recipeToDo;
     public List<int> PiecesAlreadyPut => _piecesAlreadyPut;
 
@@ -60,7 +62,22 @@ public class RepairableObject : PickableObject
         else if (PiecesAlreadyPut.Count == 1) state = State.REPAIR1;
         else if (PiecesAlreadyPut.Count == 2) state = State.REPAIR2;
         else if (PiecesAlreadyPut.Count == 3) state = State.FIXED;
+        else if (broken) state = State.BROKEN;
     }
 
+    public void checkRepair(int resource)
+    {
+        foreach (var item in _recipeToDo)
+        {
+            if(item == resource)
+            {
+                _piecesAlreadyPut.Add(resource);
+                break;
+            }
+            else
+            {
 
+            }
+        }
+    }
 }

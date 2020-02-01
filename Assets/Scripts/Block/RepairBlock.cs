@@ -2,17 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RepairBlock : MonoBehaviour
+public class RepairBlock : PickUpDipositeBlock
 {
-    // Start is called before the first frame update
-    void Start()
+    public override PickableObject PickUp()
     {
-        
+        if (ownPickableObject == null) return null;
+
+        PickableObject pickableObject = ownPickableObject;
+        ownPickableObject = null;
+        return pickableObject;
     }
 
-    // Update is called once per frame
-    void Update()
+    public override void Diposide(PickableObject pickableObject)
     {
-        
+        if(pickableObject.GetComponent<PickableResource>()) ownPickableObject = pickableObject;
+        ownPickableObject.transform.SetParent(transform);
+
     }
 }

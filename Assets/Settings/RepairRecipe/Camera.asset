@@ -17,4 +17,4 @@ MonoBehaviour:
   _item3: 0
   _item1probability: 0
   _item2probability: 0
-  _item3probability: 0
+  _item3probability: 1

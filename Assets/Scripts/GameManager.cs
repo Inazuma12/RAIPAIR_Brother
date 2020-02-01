@@ -10,6 +10,12 @@ public class GameManager : MonoBehaviour
     [SerializeField] private float timeBetweenOrder;
     [SerializeField] private float timeBetweenMoneyLoss;
     [SerializeField] private float moneyLoss;
+    [SerializeField] private GameObject EntryDesk;
+    [SerializeField] private GameObject ExitDesk;
+
+    public event GameManagerEventHandler OnMoneyUpdated;
+    public event GameManagerEventHandler OnScoreUpdated;
+    public event GameManagerEventHandler OnLose;
 
     private float _money;
     private float _score;
@@ -18,11 +24,7 @@ public class GameManager : MonoBehaviour
 
     public float Money => _money;
     public float Score => _score;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+
 
     // Update is called once per frame
     void Update()
@@ -32,14 +34,22 @@ public class GameManager : MonoBehaviour
 
         if (elapsedTime >= timeBetweenOrder)
         {
-            Random.Range(0, repairableObjects.Count);
+            createOrder(Random.Range(0, repairableObjects.Count));
             elapsedTime = 0;
         }
 
         if(elapsedTime2 >= timeBetweenMoneyLoss)
         {
             _money -= moneyLoss;
+            OnMoneyUpdated?.Invoke(this);
             elapsedTime2 = 0;
         }
+
+        if (Money <= 0) OnLose?.Invoke(this);
+    }
+
+    private void createOrder(int objectIndex)
+    {
+        Instantiate(repairableObjects[objectIndex], EntryDesk.transform);
     }
 }

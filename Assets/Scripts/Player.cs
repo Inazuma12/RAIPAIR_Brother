@@ -18,7 +18,7 @@ public class Player : MonoBehaviour
     {
         if (controller.HorizontalAxis != 0 || controller.VerticalAxis != 0)
         {
-            transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(0, Mathf.Atan2(controller.HorizontalAxis, controller.VerticalAxis) * Mathf.Rad2Deg, 0), settings.Smoothness);
+            //transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(0, Mathf.Atan2(controller.HorizontalAxis, controller.VerticalAxis) * Mathf.Rad2Deg, 0), settings.Smoothness);
             myRigidbody.velocity += transform.forward * settings.Speed;
         }
 

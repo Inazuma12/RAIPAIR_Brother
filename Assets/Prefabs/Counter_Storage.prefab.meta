@@ -1,13 +1,7 @@
 fileFormatVersion: 2
-<<<<<<< HEAD:Assets/Settings/RepairRecipe/Camera.asset.meta
-guid: 4546a2763923c8c44ab3ee2df87a0e4a
-NativeFormatImporter:
-=======
-guid: f6b4d843cc56ad146a4e6b60e9d6a62a
+guid: 6bf7124de2bc94444aff0a2bffacaef4
 PrefabImporter:
->>>>>>> 029e512d03ccdba675e9abdbcec676fbda0308b4:Assets/Prefabs/Counter_Storage.prefab.meta
   externalObjects: {}
-  mainObjectFileID: 11400000
   userData: 
   assetBundleName: 
   assetBundleVariant: 

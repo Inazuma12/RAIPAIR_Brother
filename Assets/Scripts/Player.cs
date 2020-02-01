@@ -22,7 +22,7 @@ public class Player : MonoBehaviour
 
         ComputeRaycast();
 
-        if(blockToToInteract && controller.Interact)
+        if(blockToToInteract && controller.PickUpBtn)
         {
             blockToToInteract.OnInteract(this);
         }

@@ -4,6 +4,7 @@
 public class PlayerController : ScriptableObject {
     [SerializeField] private string _horizontalAxis;
     [SerializeField] private string _verticalAxis;
+    [SerializeField] private string _pickUpBtn;
 
     public float HorizontalAxis
     {
@@ -18,6 +19,14 @@ public class PlayerController : ScriptableObject {
         get
         {
             return Input.GetAxis(_verticalAxis);
+        }
+    }
+
+    public bool PickUpBtn
+    {
+        get
+        {
+            return Input.GetButton(_pickUpBtn);
         }
     }
 }

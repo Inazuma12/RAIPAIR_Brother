@@ -8,16 +8,14 @@ public class Player : MonoBehaviour
     [SerializeField] private PlayerSettings settings;
     [SerializeField] private Rigidbody myRigidbody;
 
-    private Vector3 velocity;
 
     // Update is called once per frame
     void FixedUpdate()
     {
         if (controller.HorizontalAxis != 0 || controller.VerticalAxis != 0)
         {
-            transform.eulerAngles = new Vector3(0, Mathf.Atan2(controller.HorizontalAxis, controller.VerticalAxis) * 180f / Mathf.PI, 0);
+            transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(0, Mathf.Atan2(controller.HorizontalAxis, controller.VerticalAxis) * Mathf.Rad2Deg, 0), settings.Smoothness);
             myRigidbody.velocity += transform.forward * settings.Speed;
-            // transform.position += transform.forward * settings.Speed;
         }
     }
 

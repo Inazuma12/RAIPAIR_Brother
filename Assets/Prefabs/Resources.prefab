@@ -120,8 +120,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 255611602606899432}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 060b97875772c6747a0c4118bd0c0848, type: 3}
+  m_Script: {fileID: 11500000, guid: 0e2d853cb02e4e648a338c0cb339cb14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 255611601816824477}
-  resourcesData: {fileID: 0}
+  repairRecipe: {fileID: 0}

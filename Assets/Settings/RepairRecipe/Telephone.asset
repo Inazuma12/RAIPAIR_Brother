@@ -12,9 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6076eaef6be1f2e40a87b4c497a0f515, type: 3}
   m_Name: Telephone
   m_EditorClassIdentifier: 
-  _item1: 0
-  _item2: 0
-  _item3: 0
-  _item1probability: 0
-  _item2probability: 0
-  _item3probability: 0
+  _repairSprite: {fileID: 0}
+  _toRepaireSprite: {fileID: 0}
+  _destorySprite: {fileID: 0}
+  _item1: 1
+  _item2: 2
+  _item3: 5
+  _item1probability: 0.1
+  _item2probability: 0.5
+  _item3probability: 1

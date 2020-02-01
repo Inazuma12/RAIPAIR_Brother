@@ -10,6 +10,7 @@ public class Player : MonoBehaviour
     [SerializeField] bool debug;
     private Block blockToToInteract;
     private PickableObject m_pickableObject;
+    public List<Sprite> m_sprites = new List<Sprite>();
 
     public PickableObject PickableObject
     {
@@ -22,7 +23,7 @@ public class Player : MonoBehaviour
         {
             m_pickableObject = value;
             if (m_pickableObject)
-                m_pickableObject.transform.parent = transform;
+                m_pickableObject.transform.SetParent(transform);
         }
     }
 
@@ -46,28 +47,6 @@ public class Player : MonoBehaviour
             {
                 horizontalAxis = 0;
             }
-
-            Debug.Log(verticalAxis);
-            Debug.Log(horizontalAxis);
-
-            /*  if(horizontalAxis > -0.5 && horizontalAxis < 0.5f)
-              {
-                  if (verticalAxis <= 0)
-                      horizontalAxis = -1;
-                  else
-                      horizontalAxis = 1;
-              }
-
-              else if (verticalAxis >= -0.5 && verticalAxis <= 0.5f)
-              {
-                  if (horizontalAxis >= 0)
-                      verticalAxis = 1;
-                  else
-                      verticalAxis = -1;
-
-
-              }
-              */
 
             transform.eulerAngles = new Vector3(0, Mathf.Atan2(horizontalAxis, -verticalAxis) * Mathf.Rad2Deg, 0);
             
@@ -100,12 +79,18 @@ public class Player : MonoBehaviour
 
             if (pickUpDipositeBlock)
             {
-                PickableObject pickableObject = pickUpBlock.PickUp();
+                PickableObject pickableObject = pickUpDipositeBlock.PickUp();
                 if (pickableObject)
+                {
                     PickableObject = pickableObject;
+                    return;
+                }
 
                 if (PickableObject)
-                    dipositeBlock.Diposide(PickableObject);
+                {
+                    PickableObject.transform.SetParent(null);
+                    pickUpDipositeBlock.Diposide(PickableObject);
+                }
             }
         }
     }

@@ -21,10 +21,20 @@ public class RepairableObject : PickableObject
     public List<int> RecipeToDo => _recipeToDo;
     public List<int> PiecesAlreadyPut => _piecesAlreadyPut;
 
+    private void OnValidate()
+    {
+        if (baseRecipe && spriteRenderer)
+        {
+            spriteRenderer.sprite = baseRecipe.ToRepaireSprite;
+        }
+    }
+
     // Start is called before the first frame update
     void Start()
     {
         _recipeToDo = new List<int>() { 0,0,0};
+        _piecesAlreadyPut = new List<int>();
+
         if (Random.value > 0.5)
         {
             _recipeToDo[0] = (int)baseRecipe.Item1;

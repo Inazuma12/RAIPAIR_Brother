@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Clou
   m_EditorClassIdentifier: 
   repairObject: 1
-  sprite: {fileID: 21300000, guid: a429e3f6bbdaa324096d3c686d69e70b, type: 3}
+  sprite: {fileID: 21300000, guid: 9150d334638dbd14290fd1a3730b30a5, type: 3}
   price: 1
   color: {r: 0.5471698, g: 0.5471698, b: 0.5471698, a: 1}

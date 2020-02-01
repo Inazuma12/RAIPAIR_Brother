@@ -4,7 +4,9 @@ using UnityEngine;
 
 public enum State
 {
-    REPAIR,
+    REPAIR0,
+    REPAIR1,
+    REPAIR2,
     FIXED,
     BROKEN
 }
@@ -44,7 +46,10 @@ public class RepairableObject : PickableObject
 
     private void Update()
     {
-        
+        if (PiecesAlreadyPut.Count == 0) state = State.REPAIR0;
+        else if (PiecesAlreadyPut.Count == 1) state = State.REPAIR1;
+        else if (PiecesAlreadyPut.Count == 2) state = State.REPAIR2;
+        else if (PiecesAlreadyPut.Count == 3) state = State.FIXED;
     }
 
 

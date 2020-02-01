@@ -23,8 +23,6 @@ public class Player : MonoBehaviour
 
         ComputeRaycast();
 
-        Debug.Log(controller.Interact);
-
         if(blockToToInteract && controller.Interact)
         {
             blockToToInteract.OnInteract(this);

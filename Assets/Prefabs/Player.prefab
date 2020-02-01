@@ -59,7 +59,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e37114c2dc19c3c4584b149daba94aa4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  controller: {fileID: 11400000, guid: ba643ed12bda45b4fafce007a4aa8eb0, type: 2}
+  controller: {fileID: 11400000, guid: cad83894a5a10904395f22ecc55deec9, type: 2}
   settings: {fileID: 11400000, guid: be4c663b1edd25e43ac806b8715066b2, type: 2}
 --- !u!54 &8715738287209621691
 Rigidbody:

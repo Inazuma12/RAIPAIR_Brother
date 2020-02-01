@@ -9,6 +9,11 @@ public class Player : MonoBehaviour
 
     private Vector3 velocity;
     private bool isMobile = true;
+    
+    private bool isleft = true;
+    private bool isRight = true;
+    private bool isUp = true;
+    private bool isDown = true;
 
     // Start is called before the first frame update
     void Start()
@@ -19,20 +24,56 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        velocity = new Vector3(controller.HorizontalAxis * settings.Speed, 0, controller.VerticalAxis * settings.Speed );
+        if (isMobile) velocity = new Vector3(controller.HorizontalAxis * settings.Speed, 0, controller.VerticalAxis * settings.Speed);
+        else if (!isMobile && isleft && controller.HorizontalAxis > 0) velocity = new Vector3(controller.HorizontalAxis * settings.Speed, 0, 0);
+        else if (!isMobile && isRight && controller.HorizontalAxis < 0) velocity = new Vector3(controller.HorizontalAxis * settings.Speed, 0, 0);
+        else if (!isMobile && isUp && controller.VerticalAxis < 0)
+        {
+            velocity = new Vector3(0, 0, controller.VerticalAxis * settings.Speed);
+        }
+        else if (!isMobile && isDown && controller.VerticalAxis > 0)
+        {
+            velocity = new Vector3(0, 0, controller.VerticalAxis * settings.Speed);
+        }
+        else velocity = new Vector3();
 
-        if (isMobile) transform.position += velocity;
-        else if (!isMobile && controller.VerticalAxis < 0) transform.position += new Vector3(0, 0, controller.VerticalAxis * settings.Speed);
-        else if (!isMobile) transform.position += new Vector3(controller.HorizontalAxis * settings.Speed, 0, 0);
+        Debug.Log(controller.VerticalAxis);
+        transform.position += velocity;
     }
 
     private void OnTriggerEnter(Collider other) 
-    { 
+    {
+        Block collider;
         isMobile = false;
+        
+        if(other.CompareTag("Block"))
+        {
+            collider = other.gameObject.GetComponent<Block>();
+            
+            isleft = collider.Orientation1 == Orientation.LEFT ? true : false;
+            
+            isRight = collider.Orientation1 == Orientation.RIGHT ? true : false;
+            
+            isUp = collider.Orientation1 == Orientation.UP ? true : false;
+           
+            isDown = collider.Orientation1 == Orientation.DOWN ? true : false;
+
+            if (collider.Orientation2 != Orientation.NONE)
+            {
+                isUp = collider.Orientation2 == Orientation.UP ? true : false;
+                isDown = collider.Orientation2 == Orientation.DOWN ? true : false;
+            }
+
+
+        }
     }
 
     private void OnTriggerExit(Collider other)
     {
         isMobile = true;
+        isleft = false;
+        isRight = false;
+        isUp = false;
+        isDown = false;
     }
 }

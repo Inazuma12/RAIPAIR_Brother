@@ -72,6 +72,16 @@ PrefabInstance:
       propertyPath: type
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 3542105836921939941, guid: a2d7c98d38c475a42975fc6833886e85,
+        type: 3}
+      propertyPath: Orientation1
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3542105836921939941, guid: a2d7c98d38c475a42975fc6833886e85,
+        type: 3}
+      propertyPath: _type
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 8795853585498554279, guid: a2d7c98d38c475a42975fc6833886e85,
         type: 3}
       propertyPath: m_Materials.Array.data[0]

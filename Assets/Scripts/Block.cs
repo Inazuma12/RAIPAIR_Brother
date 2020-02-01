@@ -15,8 +15,22 @@ enum Type
     DIAGNOSTIC
 }
 
+public enum Orientation
+{
+    LEFT,
+    RIGHT,
+    UP,
+    DOWN,
+    NONE
+}
+
 public class Block : MonoBehaviour
 {
     [SerializeField]
-    Type type = Type.EMPTY;
+    Type _type = Type.EMPTY;
+    
+    public Orientation Orientation1 = Orientation.NONE;
+
+    public Orientation Orientation2 = Orientation.NONE;
+
 }

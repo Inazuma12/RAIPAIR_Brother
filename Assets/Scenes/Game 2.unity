@@ -9251,7 +9251,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02b8803514cc8d742b06c75bcef2c8c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _type: 8
+  _type: 7
   ownPickableObject: {fileID: 0}
   feedBackPrefab: {fileID: 4757602397959252893, guid: bd8a1c370385b8642a408ed2e6921956,
     type: 3}

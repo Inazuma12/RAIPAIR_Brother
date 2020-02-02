@@ -141,7 +141,7 @@ public class GameManager : MonoBehaviour
         if(ExitDesk.repairableObject)
         {
             GameManager.Instance.Money += GameManager.Instance.MoneyToAdd[(int)ExitDesk.repairableObject.state];
-
+            Destroy(ExitDesk.repairableObject.gameObject);
         }
 
    

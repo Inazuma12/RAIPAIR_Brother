@@ -72,6 +72,7 @@ public class RepairableObject : PickableObject
             if(item == resource)
             {
                 _piecesAlreadyPut.Add(resource);
+                _recipeToDo[_recipeToDo.FindIndex(item)] = 
                 break;
             }
             else

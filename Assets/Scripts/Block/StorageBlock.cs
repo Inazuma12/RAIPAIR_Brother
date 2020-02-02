@@ -13,13 +13,15 @@ public class StorageBlock : PickUpDipositeBlock
         return pickableObject;
     }
 
-    public override void Diposide(PickableObject pickableObject)
+    public override bool Diposide(PickableObject pickableObject)
     {
         if (ownPickableObject == null)
         {
             ownPickableObject = pickableObject;
             ownPickableObject.transform.SetParent(transform);
+            return true;
         }
+        return false;
     }
 
 }

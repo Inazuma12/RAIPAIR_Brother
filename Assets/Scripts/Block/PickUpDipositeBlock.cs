@@ -16,9 +16,9 @@ public class PickUpDipositeBlock : Block
         return null;
     }
 
-    virtual public void Diposide(PickableObject pickableObject)
+    virtual public bool Diposide(PickableObject pickableObject)
     {
-        
+        return false;
     }
 
 }

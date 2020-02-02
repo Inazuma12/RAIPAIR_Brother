@@ -13,17 +13,25 @@ public class RepairBlock : PickUpDipositeBlock
         return pickableObject;
     }
 
-    public override void Diposide(PickableObject pickableObject)
+    public override bool Diposide(PickableObject pickableObject)
     {
         if(pickableObject.GetComponent<RepairableObject>())
         {
             ownPickableObject = pickableObject;
-            ownPickableObject.transform.SetParent(transform);
+            ownPickableObject.transform.SetParent(this.transform);
+            return true;
         }
 
-        if(ownPickableObject != null && pickableObject.GetComponent<Resources>() != null)
+        if(ownPickableObject != null && pickableObject.GetComponent<Resource>() != null)
         {
+         
+
+            
             ownPickableObject.GetComponent<RepairableObject>().checkRepair((int)pickableObject.GetComponent<Resource>().ResourcesData.RepairObject);
+            Destroy(pickableObject.gameObject);
+            return true;
         }
+
+        return false;
     }
 }

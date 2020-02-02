@@ -6,10 +6,11 @@ public class Resource : PickableObject
 {
     [SerializeField]
     ResourceInfo resourceInfo;
+    public ResourceInfo ResourcesData { get => resourceInfo; set => resourceInfo = value; }
 
     private void OnValidate()
     {
-        if (resourceInfo && spriteRenderer)
-            spriteRenderer.sprite = resourceInfo.Sprite;
+        if (resourceInfo && SpriteRenderer)
+            SpriteRenderer.sprite = resourceInfo.Sprite;
     }
 }

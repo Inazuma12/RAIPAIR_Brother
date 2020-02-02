@@ -6,37 +6,27 @@ public class ShopBlock : PickUpBlock
 {
     [SerializeField]
     float cooldown = 0;
+    [SerializeField]
+    Color inactived = Color.black;
 
     bool canPickUp = true;
 
-    public bool CanPickUp
-    {
-        get
-        {
-            return canPickUp;
-        }
+    
 
-        set
-        {
-            if (canPickUp && !value)
-            {
-                ownPickableObject = Instantiate(ownPickableObject, transform);
-                StartCoroutine(CoolDown());
-            }
-            canPickUp = value;
-        }
+    public Resource PickableResource
+    {
+        get { return ((Resource)ownPickableObject); }
     }
 
-    public PickableResource PickableResource
+    IEnumerator CoolDown(PickableObject o)
     {
-        get { return ((PickableResource)ownPickableObject); }
-    }
-
-    IEnumerator CoolDown()
-    {
-        CanPickUp = false;
+        ownPickableObject = o;
+        Color color = ownPickableObject.SpriteRenderer.color;
+        ownPickableObject.SpriteRenderer.color = inactived;
+        canPickUp = false;
         yield return new WaitForSeconds(cooldown);
-        CanPickUp = true;
+        canPickUp = true;
+        ownPickableObject.SpriteRenderer.color = color;
     }
 
     public override PickableObject PickUp()
@@ -48,15 +38,17 @@ public class ShopBlock : PickUpBlock
 
         float newMoney = GameManager.Instance.Money - PickableResource.ResourcesData.Price;
 
-        if (newMoney >= 0 && CanPickUp)
+        if (newMoney >= 0 && canPickUp)
         {
             GameManager.Instance.Money -= PickableResource.ResourcesData.Price;
             PickableObject newPickableObject = Instantiate(ownPickableObject, transform);
             PickableObject pickableObject = base.PickUp();
-            CanPickUp = true;
-            ownPickableObject = newPickableObject;
+            StartCoroutine(CoolDown(newPickableObject));
+           
             return pickableObject;
         }
+        else if(ownPickableObject)
+            ownPickableObject.SpriteRenderer.color = inactived;
 
         return null;
     }

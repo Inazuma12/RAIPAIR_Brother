@@ -11,7 +11,6 @@ public class GameManager : MonoBehaviour
     [SerializeField] private float timeBetweenMoneyLoss;
     [SerializeField] private float moneyLoss;
     [SerializeField] private ReceptBlock[] EntryDesk;
-    [SerializeField] private GameObject ExitDesk;
     [SerializeField] static GameManager m_instance;
 
     public event GameManagerEventHandler OnMoneyUpdated;
@@ -39,11 +38,25 @@ public class GameManager : MonoBehaviour
         set
         {
             _money = value;
+
+            if(HUD.Instance)
+            HUD.Instance.Money = _money;
             OnMoneyUpdated?.Invoke(this);
         }
     }
 
-    public float Score => _score;
+    public float Score
+    {
+        get
+        {
+            return _score;
+        }
+        set
+        {
+            _score = value;
+            HUD.Instance.Score = _score;
+        }
+    }
 
     public static GameManager Instance
     {
@@ -56,6 +69,12 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         m_instance = this;
+        if (HUD.Instance)
+        {
+            HUD.Instance.Money = Money;
+            HUD.Instance.Score = Score;
+        }
+
     }
 
     // Update is called once per frame
@@ -86,6 +105,13 @@ public class GameManager : MonoBehaviour
     private void createOrder(int objectIndex)
     {
         Transform entryDesk = EntryDesk[0].IsFull ? EntryDesk[1].transform : EntryDesk[0].transform;
-        _newOrder = Instantiate(repairableObjects[objectIndex], entryDesk.position + new Vector3(0, 1), entryDesk.rotation);
+        _newOrder = Instantiate(repairableObjects[objectIndex], entryDesk);
+    }
+
+    public void ExitDesk(PickableObject pickableObject)
+    {
+        Money += 10;
+        Score += 10;
+       
     }
 }

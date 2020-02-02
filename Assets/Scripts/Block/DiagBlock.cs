@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class DiagBlock : PickUpDipositeBlock
 {
+    [SerializeField] private GameObject recipeBubble;
     // Start is called before the first frame update
     public override PickableObject PickUp()
     {
@@ -15,14 +16,17 @@ public class DiagBlock : PickUpDipositeBlock
         return pickableObject;
     }
 
-    public override void Diposide(PickableObject pickableObject)
+    public override bool Diposide(PickableObject pickableObject)
     {
         if (ownPickableObject == null)
         {
             ownPickableObject = pickableObject;
-            ownPickableObject.transform.SetParent(transform);
+            //ownPickableObject.transform.SetParent(transform);
             PrintRecipe(pickableObject);
+
+            return true;
         }
+        return false;
     }
 
     private void PrintRecipe(PickableObject pickableObject)

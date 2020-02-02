@@ -18,14 +18,16 @@ public class RepairableObject : PickableObject
     private List<int> _piecesAlreadyPut;
 
     public State state;
+    private bool broken;
+
     public List<int> RecipeToDo => _recipeToDo;
     public List<int> PiecesAlreadyPut => _piecesAlreadyPut;
 
     private void OnValidate()
     {
-        if (baseRecipe && spriteRenderer)
+        if (baseRecipe && SpriteRenderer)
         {
-            spriteRenderer.sprite = baseRecipe.ToRepaireSprite;
+            SpriteRenderer.sprite = baseRecipe.ToRepaireSprite;
         }
     }
 
@@ -56,11 +58,42 @@ public class RepairableObject : PickableObject
 
     private void Update()
     {
-        if (PiecesAlreadyPut.Count == 0) state = State.REPAIR0;
+        if (broken)
+        {
+            state = State.BROKEN;
+            spriteRenderer.sprite = baseRecipe.DestorySprite;
+        }
+        else if (PiecesAlreadyPut.Count == 0) state = State.REPAIR0;
         else if (PiecesAlreadyPut.Count == 1) state = State.REPAIR1;
         else if (PiecesAlreadyPut.Count == 2) state = State.REPAIR2;
-        else if (PiecesAlreadyPut.Count == 3) state = State.FIXED;
+        else if (PiecesAlreadyPut.Count == 3)
+        {
+            state = State.FIXED;
+            SpriteRenderer.sprite = baseRecipe.RepairSprite;
+        }
+<<<<<<< HEAD
+=======
+        else if (broken)
+        {
+            state = State.BROKEN;
+            SpriteRenderer.sprite = baseRecipe.DestorySprite;
+        }
+>>>>>>> cc5eb22dba75e1ea791bd1ce093ad9c503e9d379
     }
 
-
+    public void checkRepair(int resource)
+    {
+        for (int i = 0; i < _recipeToDo.Count; i++)
+        {
+            if(_recipeToDo[i] == resource)
+            {
+                _piecesAlreadyPut.Add(resource);
+                break;
+            }
+            else
+            {
+                broken = true;
+            }
+        }
+    }
 }

@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6076eaef6be1f2e40a87b4c497a0f515, type: 3}
   m_Name: Montre
   m_EditorClassIdentifier: 
-  _repairSprite: {fileID: 0}
-  _toRepaireSprite: {fileID: 0}
-  _destorySprite: {fileID: 0}
+  _repairSprite: {fileID: 21300000, guid: 3f17c3932fc7ba44dba3f1515427b87a, type: 3}
+  _toRepaireSprite: {fileID: 21300000, guid: 9c93ffa413a0b02438dbfa56cbddabf1, type: 3}
+  _destorySprite: {fileID: 21300000, guid: 9934a186241c5084eb996af7a514604f, type: 3}
   _item1: 1
   _item2: 2
   _item3: 3

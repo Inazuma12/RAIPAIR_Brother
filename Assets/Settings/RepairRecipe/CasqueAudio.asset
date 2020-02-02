@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6076eaef6be1f2e40a87b4c497a0f515, type: 3}
   m_Name: CasqueAudio
   m_EditorClassIdentifier: 
-  _repairSprite: {fileID: 0}
-  _toRepaireSprite: {fileID: 0}
-  _destorySprite: {fileID: 0}
+  _repairSprite: {fileID: 21300000, guid: e91a7f74702c5834097771bfcf44fab1, type: 3}
+  _toRepaireSprite: {fileID: 21300000, guid: ebf9ccdfec2b23c46a2b9640deff2438, type: 3}
+  _destorySprite: {fileID: 21300000, guid: 9934a186241c5084eb996af7a514604f, type: 3}
   _item1: 1
   _item2: 5
   _item3: 4

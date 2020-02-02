@@ -11,10 +11,10 @@ public class PickableResource : PickableObject
 
     private void OnValidate()
     {
-        if (ResourcesData && spriteRenderer)
+        if (ResourcesData && SpriteRenderer)
         {
-            spriteRenderer.sprite = ResourcesData.Sprite;
-            spriteRenderer.color = resourcesData.Color;
+            SpriteRenderer.sprite = ResourcesData.Sprite;
+            SpriteRenderer.color = resourcesData.Color;
         }
     }
 }

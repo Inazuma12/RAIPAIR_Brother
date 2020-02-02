@@ -11,6 +11,9 @@ public class ShopBlock : PickUpBlock
 
     bool canPickUp = true;
 
+    [SerializeField, FMODUnity.EventRef]
+    string buyEvent;
+
     
 
     public Resource PickableResource
@@ -40,6 +43,7 @@ public class ShopBlock : PickUpBlock
 
         if (newMoney >= 0 && canPickUp)
         {
+            FMODUnity.RuntimeManager.PlayOneShot(buyEvent, transform.position);
             GameManager.Instance.Money -= PickableResource.ResourcesData.Price;
             PickableObject newPickableObject = Instantiate(ownPickableObject, transform);
             PickableObject pickableObject = base.PickUp();

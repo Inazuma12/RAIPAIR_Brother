@@ -19,6 +19,15 @@ public class GameManager : MonoBehaviour
     public event GameManagerEventHandler OnLose;
     public event GameManagerEventHandler OnOrderGenerated;
 
+    [FMODUnity.EventRef]
+    public string angryEvent;
+    [FMODUnity.EventRef]
+    public string happyEvent;
+    [FMODUnity.EventRef]
+    public string mediumClient;
+    [FMODUnity.EventRef]
+    public string newOrderEvent;
+
     public int commandeNotReceived = 0;
    
     public int objectTrash = 0;
@@ -119,6 +128,7 @@ public class GameManager : MonoBehaviour
     {
         if ((!EntryDesk[0].IsFull || !EntryDesk[1].IsFull))
         {
+            FMODUnity.RuntimeManager.PlayOneShot(newOrderEvent, transform.position);
             int index = createOrder(Random.Range(0, repairableObjects.Count));
             EntryDesk[index].Instance_OnOrderGenerated(this);
         }
@@ -135,6 +145,22 @@ public class GameManager : MonoBehaviour
         }
 
    
+    }
+
+    public void OnCientReceptExit()
+    {
+        if (ExitDesk.repairableObject)
+        {
+            if(ExitDesk.repairableObject.state == global::State.REPAIR0)
+                FMODUnity.RuntimeManager.PlayOneShot(angryEvent, transform.position);
+            if (ExitDesk.repairableObject.state == global::State.FIXED)
+                FMODUnity.RuntimeManager.PlayOneShot(happyEvent, transform.position);
+            if (ExitDesk.repairableObject.state != global::State.FIXED && ExitDesk.repairableObject.state != global::State.REPAIR0)
+                FMODUnity.RuntimeManager.PlayOneShot(happyEvent, transform.position);
+
+        }
+
+
     }
 
 

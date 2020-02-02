@@ -18,7 +18,7 @@ public class Player : MonoBehaviour
     [SerializeField, FMODUnity.EventRef]
     string footStepEvent;
 
-    float footStepTime = 0;
+   public float footStepTime = 0;
 
     bool playerIndexSet = false;
     PlayerIndex playerIndex;

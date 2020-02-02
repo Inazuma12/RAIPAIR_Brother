@@ -14,21 +14,18 @@ public class shakeModel : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        try
-        {
-            pickableObject = GetComponentInParent<PickUpDipositeBlock>().ownPickableObject;
-        }
-        catch (System.Exception)
-        {
-            try
-            {
-                pickableObject = GetComponentInParent<DipositeBlock>().ownPickableObject;
-            }
-            catch (System.Exception)
-            {
-                pickableObject = GetComponentInParent<PickUpBlock>().ownPickableObject;
-            }
-        }
+        PickUpDipositeBlock pickUpBlock = GetComponentInParent<PickUpDipositeBlock>();
+        DipositeBlock dipositeBlock = GetComponentInParent<DipositeBlock>();
+        PickUpDipositeBlock pickUpDipositeBlock = GetComponentInParent<PickUpDipositeBlock>();
+
+
+        if (pickUpBlock)
+            pickableObject = pickUpBlock.ownPickableObject;
+        else if(dipositeBlock)
+                pickableObject = dipositeBlock.ownPickableObject;
+        else if (pickUpDipositeBlock)
+            pickableObject = pickUpDipositeBlock.ownPickableObject;
+
         if (!(wasShake) && pickableObject != null)
         {
             modelTransformBefore = modelToShake.transform.position;

@@ -13,6 +13,7 @@ public class BackBlock : DipositeBlock
 
         if (repairableObject)
         {
+            FMODUnity.RuntimeManager.PlayOneShot(pickableObject.eventdrop, transform.position);
             GameManager.Instance.State[(int)repairableObject.state]++;
 
 

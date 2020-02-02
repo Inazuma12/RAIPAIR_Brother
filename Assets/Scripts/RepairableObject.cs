@@ -25,6 +25,10 @@ public class RepairableObject : PickableObject
 
 
     public RepairRecipe BaseRecipe { get => baseRecipe; set => baseRecipe = value; }
+<<<<<<< HEAD
+=======
+
+>>>>>>> c84673bc5bf6eaa3b4eb9e7bc7ebe8c99aba42de
 
     private void OnValidate()
     {

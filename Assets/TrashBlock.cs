@@ -5,7 +5,7 @@ using UnityEngine;
 public class TrashBlock : DipositeBlock
 {
     [FMODUnity.EventRef]
-    string trashEvent;
+    public string trashEvent;
 
     public override bool Diposide(PickableObject pickableObject)
     {

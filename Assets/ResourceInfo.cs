@@ -4,11 +4,11 @@ using UnityEngine;
 
 public enum RepairObject
 {
-    CLOU = 1,
-    COLLE = 2,
-    ENGRENAGE = 3,
-    FIL = 4,
-    CIRCUIT = 5
+    CLOU,
+    COLLE,
+    ENGRENAGE,
+    FIL,
+    CIRCUIT
 }
 
 [CreateAssetMenu(menuName = "RepairBrother/Resources")]

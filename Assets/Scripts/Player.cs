@@ -15,8 +15,7 @@ public class Player : MonoBehaviour
     private Block blockToToInteract;
     private PickableObject m_pickableObject;
     public List<Sprite> m_sprites = new List<Sprite>();
-    [SerializeField, FMODUnity.EventRef]
-    string footStepEvent;
+   
 
    public float footStepTime = 0;
 
@@ -49,7 +48,7 @@ public class Player : MonoBehaviour
     {
         if (canPlay)
         {
-            FMODUnity.RuntimeManager.PlayOneShot(footStepEvent, transform.position);
+        //    FMODUnity.RuntimeManager.PlayOneShot(footStepEvent, transform.position);
             StartCoroutine(Play());
         }
 
@@ -81,7 +80,6 @@ public class Player : MonoBehaviour
                 GamePadState testState = GamePad.GetState(testPlayerIndex);
                 if (testState.IsConnected && i == controller.playerIndex)
                 {
-                    Debug.Log(string.Format("GamePad found {0}", testPlayerIndex));
                     playerIndex = testPlayerIndex;
                     playerIndexSet = true;
                 }
@@ -103,7 +101,7 @@ public class Player : MonoBehaviour
                 angle = 0;
             else
                 angle = 180;*/
-            PlaySound();
+          
 
         horizontalAxis = state.ThumbSticks.Left.X;
             verticalAxis = state.ThumbSticks.Left.Y;
@@ -156,7 +154,7 @@ public class Player : MonoBehaviour
             //transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(0, Mathf.Atan2(controller.HorizontalAxis, controller.VerticalAxis) * Mathf.Rad2Deg, 0), settings.Smoothness);
             myRigidbody.velocity = forward.forward * settings.Speed;
 
-            FMODUnity.RuntimeManager.PlayOneShot(footStepEvent, transform.position);
+//            FMODUnity.RuntimeManager.PlayOneShot(footStepEvent, transform.position);
         }
         else
             myRigidbody.velocity = Vector3.zero;

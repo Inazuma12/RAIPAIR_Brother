@@ -49,7 +49,6 @@ public class shakeModel : MonoBehaviour
             shakeDuration -= Time.deltaTime * decreaseFactor;
             yield return new WaitForSeconds(Time.deltaTime);
         }
-        Debug.Log("yolo");
         modelToShake.transform.position = modelTransformBefore;
     }
 }

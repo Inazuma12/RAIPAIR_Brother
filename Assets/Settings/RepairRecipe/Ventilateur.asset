@@ -15,15 +15,9 @@ MonoBehaviour:
   _repairSprite: {fileID: 21300000, guid: c4b012ae73b097e47b1281da478bd916, type: 3}
   _toRepaireSprite: {fileID: 21300000, guid: d9287ef9eabc1bf458a166c44db3d46e, type: 3}
   _destorySprite: {fileID: 21300000, guid: 9934a186241c5084eb996af7a514604f, type: 3}
-  money:
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  _item1: 1
-  _item2: 3
-  _item3: 4
+  _item1: 0
+  _item2: 2
+  _item3: 3
   _item1probability: 0.4
   _item2probability: 0.6
   _item3probability: 1

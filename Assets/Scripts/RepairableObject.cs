@@ -83,12 +83,9 @@ public class RepairableObject : PickableObject
             {
                 FMODUnity.RuntimeManager.PlayOneShot(repairEvent, transform.position);
                 _piecesAlreadyPut.Add(resource);
-                break;
-            }
-            else
-            {
-                broken = true;
+                return;
             }
         }
+        broken = true;
     }
 }

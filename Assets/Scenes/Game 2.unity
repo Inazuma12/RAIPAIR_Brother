@@ -695,14 +695,14 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5867026460281949201, guid: b6bcc3f512193aa4c903bc67c951bbc0,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3819669743464550030, guid: b6bcc3f512193aa4c903bc67c951bbc0,
         type: 3}
       propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5867026460281949201, guid: b6bcc3f512193aa4c903bc67c951bbc0,
+        type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
@@ -1560,14 +1560,14 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5867026460281949201, guid: b6bcc3f512193aa4c903bc67c951bbc0,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3819669743464550030, guid: b6bcc3f512193aa4c903bc67c951bbc0,
         type: 3}
       propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5867026460281949201, guid: b6bcc3f512193aa4c903bc67c951bbc0,
+        type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
@@ -3812,6 +3812,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 3523480947250331273, guid: e67decb75b0b4da4b8c52c6d4f20cd11,
         type: 3}
+    - target: {fileID: 804133955, guid: 78c5c49b712e8fa44a0a635151762445, type: 3}
+      propertyPath: footStepTime
+      value: 100000
+      objectReference: {fileID: 0}
     - target: {fileID: 426108679795768773, guid: 78c5c49b712e8fa44a0a635151762445,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -7191,6 +7195,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -311295070178498950, guid: a2e89e3136447c94e97289571d263f11,
         type: 3}
+    - target: {fileID: 804133955, guid: 78c5c49b712e8fa44a0a635151762445, type: 3}
+      propertyPath: footStepTime
+      value: 10000
+      objectReference: {fileID: 0}
+    - target: {fileID: 657551744601896033, guid: 78c5c49b712e8fa44a0a635151762445,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1128852787405669674, guid: a2e89e3136447c94e97289571d263f11,
+        type: 3}
     - target: {fileID: 426108679795768773, guid: 78c5c49b712e8fa44a0a635151762445,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -7216,12 +7230,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.2
       objectReference: {fileID: 0}
-    - target: {fileID: 657551744601896033, guid: 78c5c49b712e8fa44a0a635151762445,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: -1128852787405669674, guid: a2e89e3136447c94e97289571d263f11,
-        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 78c5c49b712e8fa44a0a635151762445, type: 3}
 --- !u!4 &1756424569 stripped
@@ -8721,11 +8729,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5686084090518175692, guid: 0e641da57290634479885d9d7ece22d1,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8681247514059022024, guid: 0e641da57290634479885d9d7ece22d1,
         type: 3}
       propertyPath: m_IsTrigger
@@ -8734,6 +8737,11 @@ PrefabInstance:
     - target: {fileID: 8058839071967021288, guid: 0e641da57290634479885d9d7ece22d1,
         type: 3}
       propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5686084090518175692, guid: 0e641da57290634479885d9d7ece22d1,
+        type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
@@ -9217,7 +9225,13 @@ MonoBehaviour:
   ownPickableObject: {fileID: 0}
   feedBackPrefab: {fileID: 4757602397959252893, guid: bd8a1c370385b8642a408ed2e6921956,
     type: 3}
-  resourceSprite: []
+  resourceSprite:
+  - {fileID: 11400000, guid: 8bcdaf644dafe5f4aadb0844069d17b0, type: 2}
+  - {fileID: 11400000, guid: d24daa883206f604caa6129cbbce6458, type: 2}
+  - {fileID: 11400000, guid: a59fffb3b774c744ea5c12a61918a5bb, type: 2}
+  - {fileID: 11400000, guid: c55da4862a50d134496be8f96488b1fa, type: 2}
+  - {fileID: 11400000, guid: 50dfe81fcb1d5b741b335fc4ca551f73, type: 2}
+  diagEvent: event:/SFX/SFX_Diagnostic
 --- !u!1001 &8141169561132639604
 PrefabInstance:
   m_ObjectHideFlags: 0

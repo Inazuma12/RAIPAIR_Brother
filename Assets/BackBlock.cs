@@ -8,11 +8,12 @@ public class BackBlock : DipositeBlock
 
     public override bool Diposide(PickableObject pickableObject)
     {
-        ownPickableObject = pickableObject;
-        RepairableObject repairableObject = (RepairableObject)pickableObject;
+         repairableObject = (RepairableObject)pickableObject;
 
         if (repairableObject)
         {
+            ownPickableObject = pickableObject;
+
             FMODUnity.RuntimeManager.PlayOneShot(pickableObject.eventdrop, transform.position);
             GameManager.Instance.State[(int)repairableObject.state]++;
 

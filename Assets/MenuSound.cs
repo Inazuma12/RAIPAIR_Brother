@@ -5,16 +5,16 @@ using UnityEngine;
 public class MenuSound : MonoBehaviour
 {
     [FMODUnity.EventRef]
-    string startevent;
+   public string startevent;
     [FMODUnity.EventRef]
-    string select;
+    public string select;
 
-    private void  PlayStartSound()
+    public void  PlayStartSound()
     {
         FMODUnity.RuntimeManager.PlayOneShot(startevent, transform.position);
     }
 
-    private void PlaySelectSound()
+    public void PlaySelectSound()
     {
         FMODUnity.RuntimeManager.PlayOneShot(select, transform.position);
     }

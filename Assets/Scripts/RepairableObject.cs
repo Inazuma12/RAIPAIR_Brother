@@ -14,14 +14,14 @@ public enum State
 public class RepairableObject : PickableObject
 {
     [SerializeField] private RepairRecipe baseRecipe;
-    private List<int> _recipeToDo;
-    private List<int> _piecesAlreadyPut;
+    private List<RepairObject> _recipeToDo;
+    private List<RepairObject> _piecesAlreadyPut;
 
     public State state;
     private bool broken;
 
-    public List<int> RecipeToDo => _recipeToDo;
-    public List<int> PiecesAlreadyPut => _piecesAlreadyPut;
+    public List<RepairObject> RecipeToDo => _recipeToDo;
+    public List<RepairObject> PiecesAlreadyPut => _piecesAlreadyPut;
 
     public RepairRecipe BaseRecipe { get => baseRecipe; set => baseRecipe = value; }
     [FMODUnity.EventRef] public string repairEvent;
@@ -36,14 +36,14 @@ public class RepairableObject : PickableObject
     // Start is called before the first frame update
     void Start()
     {
-        _recipeToDo = new List<int>() { 0,0,0};
-        _piecesAlreadyPut = new List<int>();
+        _recipeToDo = new List<RepairObject>();
+        _piecesAlreadyPut = new List<RepairObject>();
 
         if (Random.value > 0.5)
         {
-            _recipeToDo[0] = (int)BaseRecipe.Item1;
-            _recipeToDo[1] = (int)BaseRecipe.Item2;
-            _recipeToDo[2] = (int)BaseRecipe.Item3;
+            _recipeToDo.Add(BaseRecipe.Item1);
+            _recipeToDo.Add(BaseRecipe.Item2);
+            _recipeToDo.Add(BaseRecipe.Item3);
         }
         else
         {
@@ -51,9 +51,9 @@ public class RepairableObject : PickableObject
             for (int i = 0; i < 3; i++)
             {
                 random = Random.value;
-                if (random < BaseRecipe.Item1Probability) _recipeToDo[i] = (int)BaseRecipe.Item1;
-                else if (random < BaseRecipe.Item2Probability) _recipeToDo[i] = (int)BaseRecipe.Item2;
-                else if (random < BaseRecipe.Item3Probability) _recipeToDo[i] = (int)BaseRecipe.Item3;
+                if (random < BaseRecipe.Item1Probability) _recipeToDo.Add(BaseRecipe.Item1);
+                else if (random < BaseRecipe.Item2Probability) _recipeToDo.Add(BaseRecipe.Item2);
+                else if (random < BaseRecipe.Item3Probability) _recipeToDo.Add(BaseRecipe.Item3);
             }
         }
     }
@@ -75,7 +75,7 @@ public class RepairableObject : PickableObject
         }
     }
 
-    public void checkRepair(int resource)
+    public void checkRepair(RepairObject resource)
     {
         for (int i = 0; i < _recipeToDo.Count; i++)
         {
@@ -83,12 +83,9 @@ public class RepairableObject : PickableObject
             {
                 FMODUnity.RuntimeManager.PlayOneShot(repairEvent, transform.position);
                 _piecesAlreadyPut.Add(resource);
-                break;
-            }
-            else
-            {
-                broken = true;
+                return;
             }
         }
+        broken = true;
     }
 }

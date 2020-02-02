@@ -12,7 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5d2e35ad0af5104a8edc2e97d9a716d, type: 3}
   m_Name: Fil
   m_EditorClassIdentifier: 
-  repairObject: 4
+  repairObject: 3
   sprite: {fileID: 21300000, guid: 2e67de482af787c43b22362690520776, type: 3}
   price: 5
   color: {r: 0.75, g: 0.778125, b: 1, a: 1}
+  eventPickUp: 
+  eventdrop: 

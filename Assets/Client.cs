@@ -51,6 +51,7 @@ public class Client : MonoBehaviour
     {
         yield return new WaitForSeconds(timeTowait);
         Exit();
+        OnExit.Invoke();
     }
 
     IEnumerator Wait2()

@@ -35,7 +35,6 @@ public class ShopBlock : PickUpBlock
     public override PickableObject PickUp()
     {
 
-        Debug.Log("PickUp");
         if (!PickableResource || !PickableResource.ResourcesData)
             return null;
 

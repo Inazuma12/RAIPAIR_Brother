@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: PlayerSettings
   m_EditorClassIdentifier: 
   _speed: 100
-  _interactionDistance: 2
+  _interactionDistance: 1

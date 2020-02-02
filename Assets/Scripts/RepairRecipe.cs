@@ -9,7 +9,7 @@ public class RepairRecipe : ScriptableObject
     [SerializeField] Sprite _toRepaireSprite = null;
     [SerializeField] Sprite _destorySprite = null;
 
-      public List<float> money = new List<float>();
+  
 
 
     [SerializeField] private RepairObject _item1;
@@ -30,5 +30,4 @@ public class RepairRecipe : ScriptableObject
     public Sprite RepairSprite { get => _repairSprite; set => _repairSprite = value; }
     public Sprite ToRepaireSprite { get => _toRepaireSprite; set => _toRepaireSprite = value; }
     public Sprite DestorySprite { get => _destorySprite; set => _destorySprite = value; }
-    public List<float> Money { get => money; set => money = value; }
 }

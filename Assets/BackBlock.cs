@@ -12,7 +12,7 @@ public class BackBlock : DipositeBlock
         {
             GameManager.Instance.State[(int)repairableObject.state]++;
 
-            GameManager.Instance.Money += repairableObject.BaseRecipe.Money[(int)repairableObject.state];
+            GameManager.Instance.Money += GameManager.Instance.MoneyToAdd[(int)repairableObject.state];
 
             Destroy(pickableObject.gameObject);
             return true;

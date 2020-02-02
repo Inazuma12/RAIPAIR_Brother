@@ -36,6 +36,8 @@ public class GameManager : MonoBehaviour
 
     public RepairableObject NewOrder => _newOrder;
 
+    private List<float> moneyToAdd = new List<float>();
+
     public float Money
     {
         get
@@ -76,6 +78,7 @@ public class GameManager : MonoBehaviour
     }
 
     public List<int> State { get => state; set => state = value; }
+    public List<float> MoneyToAdd { get => moneyToAdd; set => moneyToAdd = value; }
 
     private void Awake()
     {

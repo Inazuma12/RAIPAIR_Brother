@@ -38,7 +38,7 @@ public class ShopBlock : PickUpBlock
 
         float newMoney = GameManager.Instance.Money - PickableResource.ResourcesData.Price;
 
-        if (/*newMoney >= 0 &&*/ canPickUp)
+        if (newMoney >= 0 && canPickUp)
         {
             GameManager.Instance.Money -= PickableResource.ResourcesData.Price;
             PickableObject newPickableObject = Instantiate(ownPickableObject, transform);
@@ -47,6 +47,8 @@ public class ShopBlock : PickUpBlock
            
             return pickableObject;
         }
+        else if(ownPickableObject)
+            ownPickableObject.SpriteRenderer.color = inactived;
 
         return null;
     }

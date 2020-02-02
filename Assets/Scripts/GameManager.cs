@@ -118,9 +118,11 @@ public class GameManager : MonoBehaviour
             elapsedTime2 = 0;
         }
 
-        if (Money <= 0) OnLose?.Invoke(this);
 
-        Score = Mathf.Floor((time * 10 - (commandeNotReceived * 1000) +  (State[(int)global::State.FIXED] * 500) + (State[(int)global::State.REPAIR2] * 350) + (State[(int)global::State.REPAIR1] * 250) + (State[(int)global::State.BROKEN] * 250) + (State[(int)global::State.REPAIR0] * 250) + objectTrash * 200)/10)*10;
+        if(Money < 5)
+            OnLose?.Invoke(this);
+
+        Score = time * 10 - (commandeNotReceived * 1000) +  (State[(int)global::State.FIXED] * 500) + (State[(int)global::State.REPAIR2] * 350) + (State[(int)global::State.REPAIR1] * 250) + (State[(int)global::State.BROKEN] * 250) + (State[(int)global::State.REPAIR0] * 250) + objectTrash * 200;
 
     }
 

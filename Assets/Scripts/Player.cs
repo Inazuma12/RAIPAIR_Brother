@@ -18,6 +18,8 @@ public class Player : MonoBehaviour
     [SerializeField, FMODUnity.EventRef]
     string footStepEvent;
 
+    float footStepTime = 0;
+
     bool playerIndexSet = false;
     PlayerIndex playerIndex;
     GamePadState state;
@@ -40,6 +42,26 @@ public class Player : MonoBehaviour
 
     public float horizontalAxis;
     public float verticalAxis;
+
+    bool canPlay = true;
+
+    private void PlaySound()
+    {
+        if (canPlay)
+        {
+            FMODUnity.RuntimeManager.PlayOneShot(footStepEvent, transform.position);
+            StartCoroutine(Play());
+        }
+
+    }
+
+    IEnumerator Play()
+    {
+        canPlay = false;
+        yield return new WaitForSeconds(footStepTime);
+        canPlay = true;
+    }
+
 
 
     private void Update()
@@ -81,9 +103,9 @@ public class Player : MonoBehaviour
                 angle = 0;
             else
                 angle = 180;*/
+            PlaySound();
 
-
-            horizontalAxis = state.ThumbSticks.Left.X;
+        horizontalAxis = state.ThumbSticks.Left.X;
             verticalAxis = state.ThumbSticks.Left.Y;
             var tmp = new Vector3(state.ThumbSticks.Left.X, 0, state.ThumbSticks.Left.Y);
             if (Mathf.Abs(horizontalAxis) > Mathf.Abs(verticalAxis))

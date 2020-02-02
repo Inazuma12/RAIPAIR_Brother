@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class StorageBlock : PickUpDipositeBlock
 {
+    public PickableObject objectOnStorage;
     public override PickableObject PickUp()
     {
         if (ownPickableObject == null) return null;
 
         PickableObject pickableObject = ownPickableObject;
         ownPickableObject = null;
+        objectOnStorage = ownPickableObject;
         return pickableObject;
     }
 
@@ -19,6 +21,7 @@ public class StorageBlock : PickUpDipositeBlock
         {
             ownPickableObject = pickableObject;
             ownPickableObject.transform.SetParent(transform);
+            objectOnStorage = ownPickableObject;
             return true;
         }
         return false;

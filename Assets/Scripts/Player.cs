@@ -25,7 +25,7 @@ public class Player : MonoBehaviour
         {
             m_pickableObject = value;
             if (m_pickableObject)
-                m_pickableObject.transform.SetParent(transform);
+                m_pickableObject.transform.SetParent(forward);
         }
     }
 
@@ -117,7 +117,7 @@ public class Player : MonoBehaviour
 
             if (pickUpDipositeBlock)
             {
-                PickableObject pickableObject = pickUpDipositeBlock.PickUp();
+                PickableObject pickableObject = PickableObject == null ? pickUpDipositeBlock.PickUp(): null;
                 if (pickableObject)
                 {
                     PickableObject = pickableObject;

@@ -15,8 +15,15 @@ public class RepairBlock : PickUpDipositeBlock
 
     public override void Diposide(PickableObject pickableObject)
     {
-        if(pickableObject.GetComponent<PickableResource>()) ownPickableObject = pickableObject;
-        ownPickableObject.transform.SetParent(transform);
+        if(pickableObject.GetComponent<RepairableObject>())
+        {
+            ownPickableObject = pickableObject;
+            ownPickableObject.transform.SetParent(transform);
+        }
 
+        if(ownPickableObject != null && pickableObject.GetComponent<Resources>() != null)
+        {
+            ownPickableObject.GetComponent<RepairableObject>().checkRepair((int)pickableObject.GetComponent<Resource>().ResourcesData.RepairObject);
+        }
     }
 }

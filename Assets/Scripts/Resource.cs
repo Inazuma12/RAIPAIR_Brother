@@ -6,6 +6,7 @@ public class Resource : PickableObject
 {
     [SerializeField]
     ResourceInfo resourceInfo;
+    public ResourceInfo ResourcesData { get => resourceInfo; set => resourceInfo = value; }
 
     private void OnValidate()
     {

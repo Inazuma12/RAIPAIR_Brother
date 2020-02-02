@@ -1,4 +1,6 @@
 ﻿ using UnityEngine;
+using System.Collections.Generic;
+
 [CreateAssetMenu(menuName = "RepairBrother/RepairRecipe")]
 
 public class RepairRecipe : ScriptableObject
@@ -6,6 +8,8 @@ public class RepairRecipe : ScriptableObject
     [SerializeField] Sprite _repairSprite = null;
     [SerializeField] Sprite _toRepaireSprite = null;
     [SerializeField] Sprite _destorySprite = null;
+
+  
 
 
     [SerializeField] private RepairObject _item1;

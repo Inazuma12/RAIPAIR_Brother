@@ -34,7 +34,7 @@ public class shakeModel : MonoBehaviour
             modelTransformBefore = modelToShake.transform.position;
             StartCoroutine(_modelShake(0.1f));
             wasShake = true;
-            pickableObject.transform.position = new Vector3(transform.position.x, transform.position.y, pickableObject.transform.position.z);
+            pickableObject.transform.position = new Vector3(transform.position.x, pickableObject.transform.position.y, transform.position.z);
         }
         if (pickableObject == null)
         {

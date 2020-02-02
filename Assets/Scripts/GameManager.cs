@@ -18,6 +18,14 @@ public class GameManager : MonoBehaviour
     public event GameManagerEventHandler OnLose;
     public event GameManagerEventHandler OnOrderGenerated;
 
+    public int commandeNotReceived = 0;
+   
+    public int objectTrash = 0;
+
+    float time = 0;
+
+    public List<int> state = new List<int>();
+
     [SerializeField]
     private float _money;
     private float _score;
@@ -54,7 +62,8 @@ public class GameManager : MonoBehaviour
         set
         {
             _score = value;
-            HUD.Instance.Score = _score;
+            if (HUD.Instance)
+                HUD.Instance.Score = _score;
         }
     }
 
@@ -65,6 +74,8 @@ public class GameManager : MonoBehaviour
             return m_instance;
         }
     }
+
+    public List<int> State { get => state; set => state = value; }
 
     private void Awake()
     {
@@ -80,6 +91,8 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        time += Time.deltaTime;
+
         if (repairableObjects.Count == 0)
             return;
 
@@ -100,6 +113,9 @@ public class GameManager : MonoBehaviour
         }
 
         if (Money <= 0) OnLose?.Invoke(this);
+
+        Score = time * 10 - (commandeNotReceived * 1000) +  (State[(int)global::State.FIXED] * 500) + (State[(int)global::State.REPAIR2] * 350) + (State[(int)global::State.REPAIR1] * 250) + (State[(int)global::State.BROKEN] * 250) + (State[(int)global::State.REPAIR0] * 250) + objectTrash * 200;
+
     }
 
     private void createOrder(int objectIndex)

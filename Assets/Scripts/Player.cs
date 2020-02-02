@@ -161,7 +161,10 @@ public class Player : MonoBehaviour
             if (dipositeBlock)
             {
                 if (PickableObject)
-                    dipositeBlock.Diposide(PickableObject);
+                {
+                    if (dipositeBlock.Diposide(PickableObject))
+                        PickableObject = null;
+                }
             }
 
             if (pickUpDipositeBlock)
@@ -170,7 +173,9 @@ public class Player : MonoBehaviour
                 if (PickableObject)
                 {
                     canPickUp = pickUpDipositeBlock.Diposide(PickableObject);
-                    PickableObject.transform.SetParent(null);
+                    if (canPickUp)
+                        PickableObject = null;
+                    //PickableObject.transform.SetParent(null);
                 }
 
                 if (!canPickUp)

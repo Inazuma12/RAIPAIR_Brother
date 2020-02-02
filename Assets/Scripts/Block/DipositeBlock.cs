@@ -10,8 +10,8 @@ public class DipositeBlock : Block
     {
     }
 
-    public virtual void Diposide(PickableObject pickableObject)
+    public virtual bool Diposide(PickableObject pickableObject)
     {
-        
+        return false;
     }
 }

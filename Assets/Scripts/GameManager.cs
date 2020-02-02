@@ -102,13 +102,6 @@ public class GameManager : MonoBehaviour
         elapsedTime += Time.deltaTime;
         elapsedTime2 += Time.deltaTime;
 
-        if (elapsedTime >= timeBetweenOrder && (!EntryDesk[0].IsFull || !EntryDesk[1].IsFull))
-        {
-            createOrder(Random.Range(0, repairableObjects.Count));
-            OnOrderGenerated(this);
-            elapsedTime = 0;
-        }
-
         if(elapsedTime2 >= timeBetweenMoneyLoss)
         {
             _money -= moneyLoss;
@@ -119,6 +112,15 @@ public class GameManager : MonoBehaviour
 
         Score = time * 10 - (commandeNotReceived * 1000) +  (State[(int)global::State.FIXED] * 500) + (State[(int)global::State.REPAIR2] * 350) + (State[(int)global::State.REPAIR1] * 250) + (State[(int)global::State.BROKEN] * 250) + (State[(int)global::State.REPAIR0] * 250) + objectTrash * 200;
 
+    }
+
+    public void OnCientEnter()
+    {
+        if ((!EntryDesk[0].IsFull || !EntryDesk[1].IsFull))
+        {
+            createOrder(Random.Range(0, repairableObjects.Count));
+            OnOrderGenerated(this);
+        }
     }
 
     private void createOrder(int objectIndex)

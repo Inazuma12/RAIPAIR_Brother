@@ -5,7 +5,7 @@ using UnityEngine;
 public class PickUpDipositeBlock : Block
 {
     [SerializeField]
-    protected PickableObject ownPickableObject = null;
+    public PickableObject ownPickableObject = null;
     public override void OnInteract(Player player)
     {
     }

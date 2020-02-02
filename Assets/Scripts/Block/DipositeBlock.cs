@@ -6,8 +6,10 @@ using UnityEngine;
 
 public class DipositeBlock : Block 
 {
+    public PickableObject ownPickableObject;
     public override void OnInteract(Player player)
     {
+
     }
 
     public virtual bool Diposide(PickableObject pickableObject)

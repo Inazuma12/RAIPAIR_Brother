@@ -6,6 +6,7 @@ public class BackBlock : DipositeBlock
 {
     public override bool Diposide(PickableObject pickableObject)
     {
+        ownPickableObject = pickableObject;
         RepairableObject repairableObject = (RepairableObject)pickableObject;
 
         if (repairableObject)

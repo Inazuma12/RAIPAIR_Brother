@@ -118,15 +118,20 @@ public class GameManager : MonoBehaviour
     {
         if ((!EntryDesk[0].IsFull || !EntryDesk[1].IsFull))
         {
-            createOrder(Random.Range(0, repairableObjects.Count));
-            OnOrderGenerated(this);
+            int index = createOrder(Random.Range(0, repairableObjects.Count));
+            EntryDesk[index].Instance_OnOrderGenerated(this);
         }
+        else
+            commandeNotReceived++;
+
     }
 
-    private void createOrder(int objectIndex)
+    private int createOrder(int objectIndex)
     {
+        int index = EntryDesk[0].IsFull ? 1 : 0;
         Transform entryDesk = EntryDesk[0].IsFull ? EntryDesk[1].transform : EntryDesk[0].transform;
         _newOrder = Instantiate(repairableObjects[objectIndex], entryDesk);
+        return index;
     }
 
     public void ExitDesk(PickableObject pickableObject)

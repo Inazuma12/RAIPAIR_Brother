@@ -13,9 +13,9 @@ public class ReceptBlock : PickUpBlock
         GameManager.Instance.OnOrderGenerated += Instance_OnOrderGenerated;
     }
 
-    private void Instance_OnOrderGenerated(GameManager sender)
+    public void Instance_OnOrderGenerated(GameManager sender)
     {
-        if (IsFull) return;
+      //  if (IsFull) return;
         
         ownPickableObject = sender.NewOrder;
         _isFull = true;
@@ -32,6 +32,7 @@ public class ReceptBlock : PickUpBlock
 
         PickableObject pickableObject = ownPickableObject;
         ownPickableObject = null;
+        _isFull = false;
         return pickableObject;
 
     }

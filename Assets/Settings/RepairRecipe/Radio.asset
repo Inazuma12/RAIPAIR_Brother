@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6076eaef6be1f2e40a87b4c497a0f515, type: 3}
   m_Name: Radio
   m_EditorClassIdentifier: 
-  _repairSprite: {fileID: 0}
-  _toRepaireSprite: {fileID: 0}
-  _destorySprite: {fileID: 0}
+  _repairSprite: {fileID: 21300000, guid: d75bacf605192434e917c004d8f33100, type: 3}
+  _toRepaireSprite: {fileID: 21300000, guid: 664e5733c0cb62141a1707f957bedf65, type: 3}
+  _destorySprite: {fileID: 21300000, guid: 9934a186241c5084eb996af7a514604f, type: 3}
   _item1: 2
   _item2: 3
   _item3: 5

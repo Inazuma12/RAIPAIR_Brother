@@ -16,7 +16,7 @@ MonoBehaviour:
   guid: eb37835b4225ec4cb5cd7239fcea3603
   Banks:
   - {fileID: -1139523319927502533}
-  - {fileID: 5270480515005406477}
+  - {fileID: -1673419115298815274}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -38,7 +38,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: Assets/Sound/Master.strings.bank
   SubDir: 
-  lastModified: 637162195337821530
+  lastModified: 637161957199447674
   LoadResult: 0
   FileSizes:
   - Name: 
@@ -60,7 +60,7 @@ MonoBehaviour:
   guid: cedbf6173db4f44c82f81c3546dacb69
   Banks:
   - {fileID: -1139523319927502533}
-  - {fileID: 5270480515005406477}
+  - {fileID: -1673419115298815274}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -84,7 +84,7 @@ MonoBehaviour:
   guid: fbafb08b8bf7964b894c59a9368714e3
   Banks:
   - {fileID: -1139523319927502533}
-  - {fileID: 5270480515005406477}
+  - {fileID: -1673419115298815274}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -108,7 +108,7 @@ MonoBehaviour:
   guid: dc8cf944a2f37f4793f1966a2ec63940
   Banks:
   - {fileID: -1139523319927502533}
-  - {fileID: 5270480515005406477}
+  - {fileID: -1673419115298815274}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -150,7 +150,7 @@ MonoBehaviour:
   guid: f7b40470572c2b438e090d1a66c643dc
   Banks:
   - {fileID: -1139523319927502533}
-  - {fileID: 5270480515005406477}
+  - {fileID: -1673419115298815274}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -174,7 +174,7 @@ MonoBehaviour:
   guid: 656baefe205ba642a5b40f27d96b13b2
   Banks:
   - {fileID: -1139523319927502533}
-  - {fileID: 5270480515005406477}
+  - {fileID: -1673419115298815274}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -198,7 +198,7 @@ MonoBehaviour:
   guid: 0faa4db0fe11414d9f0393abd35f7037
   Banks:
   - {fileID: -1139523319927502533}
-  - {fileID: 5270480515005406477}
+  - {fileID: -1673419115298815274}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -222,7 +222,7 @@ MonoBehaviour:
   guid: ecdfd00579143247b6279f9f75dc4d95
   Banks:
   - {fileID: -1139523319927502533}
-  - {fileID: 5270480515005406477}
+  - {fileID: -1673419115298815274}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -246,7 +246,7 @@ MonoBehaviour:
   guid: 57d68a242e5cdc4f9e090707611972fc
   Banks:
   - {fileID: -1139523319927502533}
-  - {fileID: 5270480515005406477}
+  - {fileID: -1673419115298815274}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -254,6 +254,24 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 697
+--- !u!114 &-1673419115298815274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Sound/Master.bank
+  SubDir: 
+  lastModified: 637161957199437711
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &-1428568185681036172
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -270,7 +288,7 @@ MonoBehaviour:
   guid: 116bafa79e997148881c9ea2d0afa9f1
   Banks:
   - {fileID: -1139523319927502533}
-  - {fileID: 5270480515005406477}
+  - {fileID: -1673419115298815274}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -294,7 +312,7 @@ MonoBehaviour:
   guid: f5b285515a68df4d9c87006dae62e998
   Banks:
   - {fileID: -1139523319927502533}
-  - {fileID: 5270480515005406477}
+  - {fileID: -1673419115298815274}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -354,7 +372,7 @@ MonoBehaviour:
   guid: 45c3bb724344e546a73a91fa09405f28
   Banks:
   - {fileID: -1139523319927502533}
-  - {fileID: 5270480515005406477}
+  - {fileID: -1673419115298815274}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -378,7 +396,7 @@ MonoBehaviour:
   guid: 943ba5928837ac4db487b38d6f2be4b0
   Banks:
   - {fileID: -1139523319927502533}
-  - {fileID: 5270480515005406477}
+  - {fileID: -1673419115298815274}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -400,7 +418,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: -8282333721022636287}
-  - {fileID: 5270480515005406477}
+  - {fileID: -1673419115298815274}
   EditorEvents:
   - {fileID: -3639487015716463421}
   - {fileID: -1428568185681036172}
@@ -431,10 +449,10 @@ MonoBehaviour:
   - {fileID: -2087023396557498627}
   EditorParameters: []
   MasterBanks:
-  - {fileID: 5270480515005406477}
+  - {fileID: -1673419115298815274}
   StringsBanks:
   - {fileID: -8282333721022636287}
-  stringsBankWriteTime: 637162195337821530
+  stringsBankWriteTime: 637161957199447674
   cacheVersion: 3
 --- !u!114 &678533572577129044
 MonoBehaviour:
@@ -452,7 +470,7 @@ MonoBehaviour:
   guid: d3a5419ac0bd774fa1571e4d9392f747
   Banks:
   - {fileID: -1139523319927502533}
-  - {fileID: 5270480515005406477}
+  - {fileID: -1673419115298815274}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -476,7 +494,7 @@ MonoBehaviour:
   guid: 7d4117b95a232e4795c5d0ac392dfb52
   Banks:
   - {fileID: -1139523319927502533}
-  - {fileID: 5270480515005406477}
+  - {fileID: -1673419115298815274}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -518,7 +536,7 @@ MonoBehaviour:
   guid: ecb914cd4a9d064d9111def87ffc4b19
   Banks:
   - {fileID: -1139523319927502533}
-  - {fileID: 5270480515005406477}
+  - {fileID: -1673419115298815274}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -560,7 +578,7 @@ MonoBehaviour:
   guid: e03ff4e0c1c0074aa4d15af3bbb7bd34
   Banks:
   - {fileID: -1139523319927502533}
-  - {fileID: 5270480515005406477}
+  - {fileID: -1673419115298815274}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -584,7 +602,7 @@ MonoBehaviour:
   guid: 707e76f71b030f4a94b1948fabefa199
   Banks:
   - {fileID: -1139523319927502533}
-  - {fileID: 5270480515005406477}
+  - {fileID: -1673419115298815274}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -608,7 +626,7 @@ MonoBehaviour:
   guid: 3667ecb2d25d9d4d914f043f488481d5
   Banks:
   - {fileID: -1139523319927502533}
-  - {fileID: 5270480515005406477}
+  - {fileID: -1673419115298815274}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -632,7 +650,7 @@ MonoBehaviour:
   guid: 51bb87dc4a8d4841b36985a861119181
   Banks:
   - {fileID: -1139523319927502533}
-  - {fileID: 5270480515005406477}
+  - {fileID: -1673419115298815274}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -656,7 +674,7 @@ MonoBehaviour:
   guid: 34a9bb6bfdaec144b5e4ecce06887fec
   Banks:
   - {fileID: -1139523319927502533}
-  - {fileID: 5270480515005406477}
+  - {fileID: -1673419115298815274}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -680,7 +698,7 @@ MonoBehaviour:
   guid: 5893385aff1f1d4792d3abca114f8a43
   Banks:
   - {fileID: -1139523319927502533}
-  - {fileID: 5270480515005406477}
+  - {fileID: -1673419115298815274}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -705,7 +723,7 @@ MonoBehaviour:
   lastModified: 637162195337811557
   LoadResult: 0
   FileSizes: []
-  Exists: 1
+  Exists: 0
 --- !u!114 &6544131548425509291
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -722,7 +740,7 @@ MonoBehaviour:
   guid: f5f6e590da80bd4298cf8d4b9e63b8e4
   Banks:
   - {fileID: -1139523319927502533}
-  - {fileID: 5270480515005406477}
+  - {fileID: -1673419115298815274}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -746,7 +764,7 @@ MonoBehaviour:
   guid: dc8a79dba45a8a40a0e72cc30a63b7bf
   Banks:
   - {fileID: -1139523319927502533}
-  - {fileID: 5270480515005406477}
+  - {fileID: -1673419115298815274}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -770,7 +788,7 @@ MonoBehaviour:
   guid: 620abfb935ea3047b149c21e0523149b
   Banks:
   - {fileID: -1139523319927502533}
-  - {fileID: 5270480515005406477}
+  - {fileID: -1673419115298815274}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -794,7 +812,7 @@ MonoBehaviour:
   guid: 427cd980918cfc4a997df58232c0aa75
   Banks:
   - {fileID: -1139523319927502533}
-  - {fileID: 5270480515005406477}
+  - {fileID: -1673419115298815274}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -818,7 +836,7 @@ MonoBehaviour:
   guid: 4ca72ca97b1a9c44b3e52ace2c04bae5
   Banks:
   - {fileID: -1139523319927502533}
-  - {fileID: 5270480515005406477}
+  - {fileID: -1673419115298815274}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1

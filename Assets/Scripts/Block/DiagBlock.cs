@@ -21,7 +21,7 @@ public class DiagBlock : PickUpDipositeBlock
         if (ownPickableObject == null)
         {
             ownPickableObject = pickableObject;
-            //ownPickableObject.transform.SetParent(transform);
+            ownPickableObject.transform.SetParent(transform);
             PrintRecipe(pickableObject);
 
             return true;

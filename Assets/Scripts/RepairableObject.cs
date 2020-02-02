@@ -61,7 +61,7 @@ public class RepairableObject : PickableObject
         if (broken)
         {
             state = State.BROKEN;
-            spriteRenderer.sprite = baseRecipe.DestorySprite;
+            SpriteRenderer.sprite = baseRecipe.DestorySprite;
         }
         else if (PiecesAlreadyPut.Count == 0) state = State.REPAIR0;
         else if (PiecesAlreadyPut.Count == 1) state = State.REPAIR1;
@@ -70,11 +70,6 @@ public class RepairableObject : PickableObject
         {
             state = State.FIXED;
             SpriteRenderer.sprite = baseRecipe.RepairSprite;
-        }
-        else if (broken)
-        {
-            state = State.BROKEN;
-            SpriteRenderer.sprite = baseRecipe.DestorySprite;
         }
     }
 

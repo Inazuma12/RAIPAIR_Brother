@@ -9,34 +9,18 @@ public class ShopBlock : PickUpBlock
 
     bool canPickUp = true;
 
-    public bool CanPickUp
-    {
-        get
-        {
-            return canPickUp;
-        }
+    
 
-        set
-        {
-            if (canPickUp && !value)
-            {
-                ownPickableObject = Instantiate(ownPickableObject, transform);
-                StartCoroutine(CoolDown());
-            }
-            canPickUp = value;
-        }
-    }
-
-    public PickableResource PickableResource
+    public Resource PickableResource
     {
-        get { return ((PickableResource)ownPickableObject); }
+        get { return ((Resource)ownPickableObject); }
     }
 
     IEnumerator CoolDown()
     {
-        CanPickUp = false;
+        canPickUp = false;
         yield return new WaitForSeconds(cooldown);
-        CanPickUp = true;
+        canPickUp = true;
     }
 
     public override PickableObject PickUp()
@@ -48,12 +32,12 @@ public class ShopBlock : PickUpBlock
 
         float newMoney = GameManager.Instance.Money - PickableResource.ResourcesData.Price;
 
-        if (newMoney >= 0 && CanPickUp)
+        if (/*newMoney >= 0 &&*/ canPickUp)
         {
             GameManager.Instance.Money -= PickableResource.ResourcesData.Price;
             PickableObject newPickableObject = Instantiate(ownPickableObject, transform);
             PickableObject pickableObject = base.PickUp();
-            CanPickUp = true;
+            StartCoroutine(CoolDown());
             ownPickableObject = newPickableObject;
             return pickableObject;
         }

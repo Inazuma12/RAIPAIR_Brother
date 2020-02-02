@@ -12,11 +12,17 @@ public class HelpScreen : AScreen
 
     private int index = 0;
 
-    protected override void Start()
+    protected void Start()
     {
-        base.Start();
+        nxtBtn.onClick.AddListener(nextScreen);
         nxtButton.onClick.AddListener(NxtImage);
         prevButton.onClick.AddListener(PrevImage);
+    }
+
+    protected override void nextScreen()
+    {
+        base.nextScreen();
+        TitleCard.fromHTP = false;
     }
 
     private void NxtImage()

@@ -2,22 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
-public delegate void AScreenEventHandler(AScreen sender);
 public class AScreen : MonoBehaviour
 {
     public Animator animator;
-    [SerializeField] private Button nxtBtn;
-    public event AScreenEventHandler nxtScreen;
+    [SerializeField] protected Button nxtBtn;
     public Animator nxtAnimator;
 
-    virtual protected void Start()
+    virtual protected void nextScreen()
     {
-        nxtBtn.onClick.AddListener(nextScreen);
-    }
+        animator.SetBool("GoOut", true);
+        animator.SetBool("GoIn", false);
+        animator.SetBool("Idle", false);
 
-    protected void nextScreen()
-    {
-        nxtScreen?.Invoke(this);
+        nxtAnimator.SetBool("GoOut", false);
+        nxtAnimator.SetBool("GoIn", true);
+        nxtAnimator.SetBool("Idle", true);
     }
 }

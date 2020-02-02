@@ -8,6 +8,7 @@ public class TrashBlock : DipositeBlock
     {
         if (pickableObject)
         {
+            GameManager.Instance.objectTrash++;
             Destroy(pickableObject.gameObject);
             return true;
         }

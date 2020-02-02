@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Fil
   m_EditorClassIdentifier: 
   repairObject: 4
-  sprite: {fileID: 21300000, guid: 8e84ccd06fdcddf4aaa62d90f93b52f0, type: 3}
+  sprite: {fileID: 21300000, guid: 2e67de482af787c43b22362690520776, type: 3}
   price: 1
   color: {r: 0.75, g: 0.778125, b: 1, a: 1}

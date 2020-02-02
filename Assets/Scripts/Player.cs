@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using XInputDotNetPure; // Required in C#
+
 
 public class Player : MonoBehaviour
 {
@@ -13,6 +15,13 @@ public class Player : MonoBehaviour
     private Block blockToToInteract;
     private PickableObject m_pickableObject;
     public List<Sprite> m_sprites = new List<Sprite>();
+    [SerializeField, FMODUnity.EventRef]
+    string footStepEvent;
+
+    bool playerIndexSet = false;
+    PlayerIndex playerIndex;
+    GamePadState state;
+    GamePadState prevState;
 
     public PickableObject PickableObject
     {
@@ -32,15 +41,51 @@ public class Player : MonoBehaviour
     public float horizontalAxis;
     public float verticalAxis;
 
+
+    private void Update()
+    {
+        
+    }
+
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (controller.HorizontalAxis != 0 || controller.VerticalAxis != 0)
-        {
 
-             horizontalAxis = controller.HorizontalAxis;
-             verticalAxis = controller.VerticalAxis;
-            var tmp = new Vector3(horizontalAxis, 0, verticalAxis);
+        if (!playerIndexSet || !prevState.IsConnected)
+        {
+            for (int i = 0; i < 4; ++i)
+            {
+                PlayerIndex testPlayerIndex = (PlayerIndex)i;
+                GamePadState testState = GamePad.GetState(testPlayerIndex);
+                if (testState.IsConnected && i == controller.playerIndex)
+                {
+                    Debug.Log(string.Format("GamePad found {0}", testPlayerIndex));
+                    playerIndex = testPlayerIndex;
+                    playerIndexSet = true;
+                }
+            }
+        }
+
+        prevState = state;
+        state = GamePad.GetState(playerIndex);
+
+        if (state.ThumbSticks.Left.X != 0 || state.ThumbSticks.Left.Y != 0)
+        {
+            /*
+            float angle = 0;
+            if (controller.Left)
+                angle = 270;
+            else if (controller.Right)
+                angle = 90;
+            else if (controller.Up)
+                angle = 0;
+            else
+                angle = 180;*/
+
+
+            horizontalAxis = state.ThumbSticks.Left.X;
+            verticalAxis = state.ThumbSticks.Left.Y;
+            var tmp = new Vector3(state.ThumbSticks.Left.X, 0, state.ThumbSticks.Left.Y);
             if (Mathf.Abs(horizontalAxis) > Mathf.Abs(verticalAxis))
             {
                 verticalAxis = 0;
@@ -50,7 +95,7 @@ public class Player : MonoBehaviour
                 horizontalAxis = 0;
             }
 
-            forward.transform.eulerAngles = new Vector3(0, Mathf.Atan2(horizontalAxis, -verticalAxis) * Mathf.Rad2Deg, 0);
+            forward.transform.eulerAngles = new Vector3(0, Mathf.Atan2(horizontalAxis, verticalAxis) * Mathf.Rad2Deg, 0);
 
             if (forward.eulerAngles.y == 270)
             {
@@ -88,14 +133,18 @@ public class Player : MonoBehaviour
 
             //transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(0, Mathf.Atan2(controller.HorizontalAxis, controller.VerticalAxis) * Mathf.Rad2Deg, 0), settings.Smoothness);
             myRigidbody.velocity = forward.forward * settings.Speed;
+
+            FMODUnity.RuntimeManager.PlayOneShot(footStepEvent, transform.position);
         }
         else
             myRigidbody.velocity = Vector3.zero;
 
         ComputeRaycast();
 
-        if (blockToToInteract && controller.PickUpBtn)
-        {
+        bool pickUp = prevState.Buttons.X == ButtonState.Released && state.Buttons.X == ButtonState.Pressed;
+
+            if (blockToToInteract && pickUp)
+            {
             blockToToInteract.OnInteract(this);
 
             PickUpBlock pickUpBlock = blockToToInteract.GetComponent<PickUpBlock>();

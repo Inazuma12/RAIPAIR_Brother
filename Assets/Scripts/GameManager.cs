@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private float timeBetweenMoneyLoss;
     [SerializeField] private float moneyLoss;
     [SerializeField] private ReceptBlock[] EntryDesk;
+    [SerializeField] private BackBlock ExitDesk;
     [SerializeField] static GameManager m_instance;
 
     public event GameManagerEventHandler OnMoneyUpdated;
@@ -123,8 +124,19 @@ public class GameManager : MonoBehaviour
         }
         else
             commandeNotReceived++;
-
     }
+
+    public void OnCientReceptEnter()
+    {
+        if(ExitDesk.repairableObject)
+        {
+            GameManager.Instance.Money += GameManager.Instance.MoneyToAdd[(int)ExitDesk.repairableObject.state];
+
+        }
+
+   
+    }
+
 
     private int createOrder(int objectIndex)
     {
@@ -134,10 +146,4 @@ public class GameManager : MonoBehaviour
         return index;
     }
 
-    public void ExitDesk(PickableObject pickableObject)
-    {
-        Money += 10;
-        Score += 10;
-       
-    }
 }

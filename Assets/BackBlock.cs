@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class BackBlock : DipositeBlock
 {
+    public RepairableObject repairableObject;
+
     public override bool Diposide(PickableObject pickableObject)
     {
         ownPickableObject = pickableObject;
@@ -13,9 +15,9 @@ public class BackBlock : DipositeBlock
         {
             GameManager.Instance.State[(int)repairableObject.state]++;
 
-            GameManager.Instance.Money += GameManager.Instance.MoneyToAdd[(int)repairableObject.state];
 
-            Destroy(pickableObject.gameObject);
+            repairableObject.transform.SetParent(transform);
+            //Destroy(pickableObject.gameObject);
             return true;
         }
         return false;

@@ -11,7 +11,6 @@ public class GameManager : MonoBehaviour
     [SerializeField] private float timeBetweenMoneyLoss;
     [SerializeField] private float moneyLoss;
     [SerializeField] private ReceptBlock[] EntryDesk;
-    [SerializeField] private GameObject ExitDesk;
     [SerializeField] static GameManager m_instance;
 
     public event GameManagerEventHandler OnMoneyUpdated;
@@ -87,5 +86,11 @@ public class GameManager : MonoBehaviour
     {
         Transform entryDesk = EntryDesk[0].IsFull ? EntryDesk[1].transform : EntryDesk[0].transform;
         _newOrder = Instantiate(repairableObjects[objectIndex], entryDesk);
+    }
+
+    public void ExitDesk(PickableObject pickableObject)
+    {
+        Money += 10;
+       
     }
 }

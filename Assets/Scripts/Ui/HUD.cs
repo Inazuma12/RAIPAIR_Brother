@@ -12,6 +12,8 @@ public class HUD : MonoBehaviour
     Text scoretext;
     [SerializeField]
     Text moneyText;
+    [SerializeField]
+    public LooseScreen loseScreen;
 
     public static HUD Instance
     {

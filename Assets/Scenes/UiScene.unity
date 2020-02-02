@@ -521,6 +521,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2082818952}
+        m_MethodName: NextBu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &157169554
@@ -3608,7 +3619,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2082818951
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3644,9 +3655,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5a70629dd17989478cb1a29c34796ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 0}
-  nxtBtn: {fileID: 0}
+  animator: {fileID: 2082818953}
+  nxtBtn: {fileID: 157169553}
   nxtAnimator: {fileID: 0}
+  scoreText: {fileID: 1628194370}
+  temps: {fileID: 211354532}
 --- !u!95 &2082818953
 Animator:
   serializedVersion: 3
@@ -3737,6 +3750,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoretext: {fileID: 252721541}
   moneyText: {fileID: 1758422850}
+  loseScreen: {fileID: 2082818952}
 --- !u!1 &2118442966
 GameObject:
   m_ObjectHideFlags: 0

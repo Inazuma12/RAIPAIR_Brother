@@ -119,8 +119,11 @@ public class GameManager : MonoBehaviour
         }
 
 
-        if(Money < 5)
+        if (Money < 5)
+        {
             OnLose?.Invoke(this);
+            HUD.Instance.loseScreen.Lose();
+        }
 
         Score = time * 10 - (commandeNotReceived * 1000) +  (State[(int)global::State.FIXED] * 500) + (State[(int)global::State.REPAIR2] * 350) + (State[(int)global::State.REPAIR1] * 250) + (State[(int)global::State.BROKEN] * 250) + (State[(int)global::State.REPAIR0] * 250) + objectTrash * 200;
 

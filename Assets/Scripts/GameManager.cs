@@ -86,6 +86,6 @@ public class GameManager : MonoBehaviour
     private void createOrder(int objectIndex)
     {
         Transform entryDesk = EntryDesk[0].IsFull ? EntryDesk[1].transform : EntryDesk[0].transform;
-        _newOrder = Instantiate(repairableObjects[objectIndex], entryDesk.position + new Vector3(0, 1), entryDesk.rotation);
+        _newOrder = Instantiate(repairableObjects[objectIndex], entryDesk);
     }
 }

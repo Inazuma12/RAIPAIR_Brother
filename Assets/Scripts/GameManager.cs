@@ -136,17 +136,6 @@ public class GameManager : MonoBehaviour
             commandeNotReceived++;
     }
 
-    public void OnCientReceptEnter()
-    {
-        if(ExitDesk.repairableObject)
-        {
-            GameManager.Instance.Money += GameManager.Instance.MoneyToAdd[(int)ExitDesk.repairableObject.state];
-            Destroy(ExitDesk.repairableObject.gameObject);
-        }
-
-   
-    }
-
     public void OnCientReceptExit()
     {
         if (ExitDesk.repairableObject)
@@ -158,6 +147,9 @@ public class GameManager : MonoBehaviour
             if (ExitDesk.repairableObject.state != global::State.FIXED && ExitDesk.repairableObject.state != global::State.REPAIR0)
                 FMODUnity.RuntimeManager.PlayOneShot(happyEvent, transform.position);
 
+            GameManager.Instance.Money += GameManager.Instance.MoneyToAdd[(int)ExitDesk.repairableObject.state];
+            Destroy(ExitDesk.repairableObject.gameObject);
+            ExitDesk.repairableObject = null;
         }
 
 

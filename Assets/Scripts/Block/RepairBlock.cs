@@ -25,7 +25,7 @@ public class RepairBlock : PickUpDipositeBlock
 
         if(ownPickableObject != null && pickableObject.GetComponent<Resource>() != null)
         {
-            ownPickableObject.GetComponent<RepairableObject>().checkRepair((int)pickableObject.GetComponent<Resource>().ResourcesData.RepairObject);
+            ownPickableObject.GetComponent<RepairableObject>().checkRepair(pickableObject.GetComponent<Resource>().ResourcesData.RepairObject);
             Destroy(pickableObject.gameObject);
             return true;
         }

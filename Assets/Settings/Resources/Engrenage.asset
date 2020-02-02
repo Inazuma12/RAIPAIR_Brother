@@ -12,7 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5d2e35ad0af5104a8edc2e97d9a716d, type: 3}
   m_Name: Engrenage
   m_EditorClassIdentifier: 
-  repairObject: 3
+  repairObject: 2
   sprite: {fileID: 21300000, guid: f27d8774cebb8ad47bbb84c73a19e9be, type: 3}
   price: 5
   color: {r: 0.20754719, g: 0.08321468, b: 0.08321468, a: 1}
+  eventPickUp: 
+  eventdrop: 

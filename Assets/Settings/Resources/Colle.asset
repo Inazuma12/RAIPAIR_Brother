@@ -12,7 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5d2e35ad0af5104a8edc2e97d9a716d, type: 3}
   m_Name: Colle
   m_EditorClassIdentifier: 
-  repairObject: 2
+  repairObject: 1
   sprite: {fileID: 21300000, guid: 299fe5994288f4c4a95421b5fef7fe0c, type: 3}
   price: 5
   color: {r: 0.9811321, g: 0.5507298, b: 0.5507298, a: 1}
+  eventPickUp: 
+  eventdrop: 

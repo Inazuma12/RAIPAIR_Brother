@@ -12,7 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5d2e35ad0af5104a8edc2e97d9a716d, type: 3}
   m_Name: Clou
   m_EditorClassIdentifier: 
-  repairObject: 1
+  repairObject: 0
   sprite: {fileID: 21300000, guid: 00cc4429bc5cc044dacb5b1f68033183, type: 3}
   price: 5
   color: {r: 0.5471698, g: 0.5471698, b: 0.5471698, a: 1}
+  eventPickUp: 
+  eventdrop: 

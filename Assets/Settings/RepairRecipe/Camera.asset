@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6076eaef6be1f2e40a87b4c497a0f515, type: 3}
   m_Name: Camera
   m_EditorClassIdentifier: 
-  _repairSprite: {fileID: 0}
-  _toRepaireSprite: {fileID: 0}
-  _destorySprite: {fileID: 0}
+  _repairSprite: {fileID: 21300000, guid: e3756e743323b09488f443ad4158c48a, type: 3}
+  _toRepaireSprite: {fileID: 21300000, guid: 9ec7d512591596b4caae42dbd9064bda, type: 3}
+  _destorySprite: {fileID: 21300000, guid: 9934a186241c5084eb996af7a514604f, type: 3}
   _item1: 2
   _item2: 3
   _item3: 5

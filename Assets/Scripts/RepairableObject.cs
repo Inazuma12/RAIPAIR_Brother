@@ -23,11 +23,9 @@ public class RepairableObject : PickableObject
     public List<int> RecipeToDo => _recipeToDo;
     public List<int> PiecesAlreadyPut => _piecesAlreadyPut;
 
-<<<<<<< HEAD
-    public RepairRecipe BaseRecipe { get => baseRecipe; }
-=======
+
     public RepairRecipe BaseRecipe { get => baseRecipe; set => baseRecipe = value; }
->>>>>>> 651d4eb6be6027a51a2d1d4b2c580d1395146ffd
+
 
     private void OnValidate()
     {

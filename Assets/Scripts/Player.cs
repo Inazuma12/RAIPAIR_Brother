@@ -166,18 +166,25 @@ public class Player : MonoBehaviour
 
             if (pickUpDipositeBlock)
             {
-                PickableObject pickableObject = PickableObject == null ? pickUpDipositeBlock.PickUp(): null;
-                if (pickableObject)
-                {
-                    PickableObject = pickableObject;
-                    return;
-                }
-
+                bool canPickUp = false;
                 if (PickableObject)
                 {
+                    canPickUp = pickUpDipositeBlock.Diposide(PickableObject);
                     PickableObject.transform.SetParent(null);
-                    pickUpDipositeBlock.Diposide(PickableObject);
                 }
+
+                if (!canPickUp)
+                {
+                    PickableObject pickableObject = pickUpDipositeBlock.PickUp();
+
+                    if (pickableObject)
+                    {
+                        PickableObject = pickableObject;
+                        return;
+                    }
+                }
+
+                
             }
         }
     }

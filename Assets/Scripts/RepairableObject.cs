@@ -61,23 +61,30 @@ public class RepairableObject : PickableObject
         if (PiecesAlreadyPut.Count == 0) state = State.REPAIR0;
         else if (PiecesAlreadyPut.Count == 1) state = State.REPAIR1;
         else if (PiecesAlreadyPut.Count == 2) state = State.REPAIR2;
-        else if (PiecesAlreadyPut.Count == 3) state = State.FIXED;
-        else if (broken) state = State.BROKEN;
+        else if (PiecesAlreadyPut.Count == 3)
+        {
+            state = State.FIXED;
+            spriteRenderer.sprite = baseRecipe.RepairSprite;
+        }
+        else if (broken)
+        {
+            state = State.BROKEN;
+            spriteRenderer.sprite = baseRecipe.DestorySprite;
+        }
     }
 
     public void checkRepair(int resource)
     {
-        foreach (var item in _recipeToDo)
+        for (int i = 0; i < _recipeToDo.Count; i++)
         {
-            if(item == resource)
+            if(_recipeToDo[i] == resource)
             {
                 _piecesAlreadyPut.Add(resource);
-                _recipeToDo[_recipeToDo.FindIndex(item)] = 
                 break;
             }
             else
             {
-
+                broken = true;
             }
         }
     }

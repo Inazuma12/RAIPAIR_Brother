@@ -23,6 +23,8 @@ public class RepairableObject : PickableObject
     public List<int> RecipeToDo => _recipeToDo;
     public List<int> PiecesAlreadyPut => _piecesAlreadyPut;
 
+    public RepairRecipe BaseRecipe { get => baseRecipe; }
+
     private void OnValidate()
     {
         if (baseRecipe && SpriteRenderer)

@@ -153,9 +153,12 @@ public class Player : MonoBehaviour
 
             if (pickUpBlock)
             {
-                PickableObject pickableObject = pickUpBlock.PickUp();
-                if (pickableObject)
-                    PickableObject = pickableObject;
+                if (!PickableObject)
+                {
+                    PickableObject pickableObject = pickUpBlock.PickUp();
+                    if (pickableObject)
+                        PickableObject = pickableObject;
+                }
             }
 
             if (dipositeBlock)
@@ -178,7 +181,7 @@ public class Player : MonoBehaviour
                     //PickableObject.transform.SetParent(null);
                 }
 
-                if (!canPickUp)
+                if (!canPickUp && !PickableObject)
                 {
                     PickableObject pickableObject = pickUpDipositeBlock.PickUp();
 

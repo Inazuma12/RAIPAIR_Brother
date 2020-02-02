@@ -6,6 +6,8 @@ public class ShopBlock : PickUpBlock
 {
     [SerializeField]
     float cooldown = 0;
+    [SerializeField]
+    Color inactived = Color.black;
 
     bool canPickUp = true;
 
@@ -16,11 +18,15 @@ public class ShopBlock : PickUpBlock
         get { return ((Resource)ownPickableObject); }
     }
 
-    IEnumerator CoolDown()
+    IEnumerator CoolDown(PickableObject o)
     {
+        ownPickableObject = o;
+        Color color = ownPickableObject.SpriteRenderer.color;
+        ownPickableObject.SpriteRenderer.color = inactived;
         canPickUp = false;
         yield return new WaitForSeconds(cooldown);
         canPickUp = true;
+        ownPickableObject.SpriteRenderer.color = color;
     }
 
     public override PickableObject PickUp()
@@ -32,15 +38,17 @@ public class ShopBlock : PickUpBlock
 
         float newMoney = GameManager.Instance.Money - PickableResource.ResourcesData.Price;
 
-        if (/*newMoney >= 0 &&*/ canPickUp)
+        if (newMoney >= 0 && canPickUp)
         {
             GameManager.Instance.Money -= PickableResource.ResourcesData.Price;
             PickableObject newPickableObject = Instantiate(ownPickableObject, transform);
             PickableObject pickableObject = base.PickUp();
-            StartCoroutine(CoolDown());
-            ownPickableObject = newPickableObject;
+            StartCoroutine(CoolDown(newPickableObject));
+           
             return pickableObject;
         }
+        else if(ownPickableObject)
+            ownPickableObject.SpriteRenderer.color = inactived;
 
         return null;
     }

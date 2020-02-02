@@ -25,9 +25,9 @@ public class RepairableObject : PickableObject
 
     private void OnValidate()
     {
-        if (baseRecipe && spriteRenderer)
+        if (baseRecipe && SpriteRenderer)
         {
-            spriteRenderer.sprite = baseRecipe.ToRepaireSprite;
+            SpriteRenderer.sprite = baseRecipe.ToRepaireSprite;
         }
     }
 
@@ -69,8 +69,16 @@ public class RepairableObject : PickableObject
         else if (PiecesAlreadyPut.Count == 3)
         {
             state = State.FIXED;
-            spriteRenderer.sprite = baseRecipe.RepairSprite;
+            SpriteRenderer.sprite = baseRecipe.RepairSprite;
         }
+<<<<<<< HEAD
+=======
+        else if (broken)
+        {
+            state = State.BROKEN;
+            SpriteRenderer.sprite = baseRecipe.DestorySprite;
+        }
+>>>>>>> cc5eb22dba75e1ea791bd1ce093ad9c503e9d379
     }
 
     public void checkRepair(int resource)

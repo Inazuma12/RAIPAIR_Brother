@@ -5,5 +5,7 @@ using UnityEngine;
 public class PickableObject : MonoBehaviour
 {
     [SerializeField]
-    protected SpriteRenderer spriteRenderer = null;
+    private SpriteRenderer spriteRenderer = null;
+
+    public SpriteRenderer SpriteRenderer { get => spriteRenderer; set => spriteRenderer = value; }
 }

@@ -1,18 +1,47 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
+[SerializeField]
 public class HUD : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    static HUD instance;
+
+    [SerializeField]
+    Text scoretext;
+    [SerializeField]
+    Text moneyText;
+
+    public static HUD Instance
     {
-        
+        get
+        {
+            return instance;
+        }
+       
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Awake()
     {
-        
+        instance = this;
+    }
+
+    public float Score
+    {
+        set
+        {
+            if(scoretext)
+            scoretext.text = value.ToString();
+        }
+    }
+
+    public float Money
+    {
+        set
+        {
+            if (scoretext)
+                moneyText.text = value.ToString();
+        }
     }
 }

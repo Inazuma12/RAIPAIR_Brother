@@ -15,6 +15,12 @@ MonoBehaviour:
   _repairSprite: {fileID: 21300000, guid: b70a2f0028b12614099554bd8658dde4, type: 3}
   _toRepaireSprite: {fileID: 21300000, guid: b8dbdd2b061c6544dbb848179b7bfadf, type: 3}
   _destorySprite: {fileID: 21300000, guid: 9934a186241c5084eb996af7a514604f, type: 3}
+  money:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
   _item1: 2
   _item2: 3
   _item3: 4

@@ -47,6 +47,15 @@ MonoBehaviour:
   timeBetweenOrder: 0
   timeBetweenMoneyLoss: 0
   moneyLoss: 0
-  EntryDesk: {fileID: 0}
-  ExitDesk: {fileID: 0}
+  EntryDesk:
+  - {fileID: 0}
+  commandeNotReceived: 0
+  objectTrash: 0
+  state: 0000000000000000000000000000000000000000
   _money: 10
+  moneyToAdd:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0

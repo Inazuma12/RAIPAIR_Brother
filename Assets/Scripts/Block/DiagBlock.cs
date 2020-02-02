@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class DiagBlock : PickUpDipositeBlock
 {
+    [SerializeField] private GameObject recipeBubble;
     // Start is called before the first frame update
     public override PickableObject PickUp()
     {

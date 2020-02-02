@@ -17,6 +17,7 @@ public class RepairBlock : PickUpDipositeBlock
     {
         if(pickableObject.GetComponent<RepairableObject>())
         {
+            FMODUnity.RuntimeManager.PlayOneShot(pickableObject.eventdrop, transform.position);
             ownPickableObject = pickableObject;
             ownPickableObject.transform.SetParent(this.transform);
             return true;

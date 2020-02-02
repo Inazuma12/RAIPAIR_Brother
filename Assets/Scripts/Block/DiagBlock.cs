@@ -8,7 +8,10 @@ public class DiagBlock : PickUpDipositeBlock
     [SerializeField] private GameObject feedBackPrefab;
     [SerializeField] private ResourceInfo[] resourceSprite;
 
-    private GameObject feedback; 
+    private GameObject feedback;
+
+    [FMODUnity.EventRef]
+    string diagEvent;
 
     // Start is called before the first frame update
     public override PickableObject PickUp()
@@ -25,6 +28,7 @@ public class DiagBlock : PickUpDipositeBlock
     {
         if (ownPickableObject == null)
         {
+            FMODUnity.RuntimeManager.PlayOneShot(diagEvent, transform.position);
             ownPickableObject = pickableObject;
             ownPickableObject.transform.SetParent(transform);
             PrintRecipe(pickableObject);

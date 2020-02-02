@@ -68,6 +68,7 @@ MonoBehaviour:
   forward: {fileID: 1818107520300942266}
   m_sprites: []
   footStepEvent: event:/FOLEY/FOL_Footstep
+  footStepTime: 0.6
   horizontalAxis: 0
   verticalAxis: 0
 --- !u!54 &8715738287209621691

@@ -24,7 +24,7 @@ public class RepairableObject : PickableObject
     public List<int> PiecesAlreadyPut => _piecesAlreadyPut;
 
     public RepairRecipe BaseRecipe { get => baseRecipe; set => baseRecipe = value; }
-
+    [FMODUnity.EventRef] public string repairEvent;
     private void OnValidate()
     {
         if (BaseRecipe && SpriteRenderer)
@@ -81,6 +81,7 @@ public class RepairableObject : PickableObject
         {
             if(_recipeToDo[i] == resource)
             {
+                FMODUnity.RuntimeManager.PlayOneShot(repairEvent, transform.position);
                 _piecesAlreadyPut.Add(resource);
                 break;
             }

@@ -19,6 +19,8 @@ public class StorageBlock : PickUpDipositeBlock
     {
         if (ownPickableObject == null)
         {
+            FMODUnity.RuntimeManager.PlayOneShot(pickableObject.eventdrop, transform.position);
+
             ownPickableObject = pickableObject;
             ownPickableObject.transform.SetParent(transform);
             objectOnStorage = ownPickableObject;

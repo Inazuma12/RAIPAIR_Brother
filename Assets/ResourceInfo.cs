@@ -26,6 +26,12 @@ public class ResourceInfo : ScriptableObject
     [SerializeField]
     Color color = Color.white;
 
+    [FMODUnity.EventRef]
+    public string eventPickUp;
+
+    [FMODUnity.EventRef]
+    public string eventdrop;
+
     public RepairObject RepairObject { get => repairObject; set => repairObject = value; }
     public Sprite Sprite { get => sprite; set => sprite = value; }
     public float Price { get => price; set => price = value; }

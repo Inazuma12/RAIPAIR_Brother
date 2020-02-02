@@ -53,3 +53,9 @@ MonoBehaviour:
   objectTrash: 0
   state: 0000000000000000000000000000000000000000
   _money: 10
+  moneyToAdd:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0

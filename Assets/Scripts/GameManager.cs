@@ -36,7 +36,7 @@ public class GameManager : MonoBehaviour
 
     public RepairableObject NewOrder => _newOrder;
 
-    private List<float> moneyToAdd = new List<float>();
+    public List<float> moneyToAdd = new List<float>();
 
     public float Money
     {

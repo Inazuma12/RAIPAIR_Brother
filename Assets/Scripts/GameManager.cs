@@ -39,7 +39,7 @@ public class GameManager : MonoBehaviour
         {
             _money = value;
 
-
+            if(HUD.Instance)
             HUD.Instance.Money = _money;
             OnMoneyUpdated?.Invoke(this);
         }
@@ -69,8 +69,11 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         m_instance = this;
-        HUD.Instance.Money = Money;
-        HUD.Instance.Score = Score;
+        if (HUD.Instance)
+        {
+            HUD.Instance.Money = Money;
+            HUD.Instance.Score = Score;
+        }
 
     }
 

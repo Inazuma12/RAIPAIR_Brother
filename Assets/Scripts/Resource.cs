@@ -10,7 +10,7 @@ public class Resource : PickableObject
 
     private void OnValidate()
     {
-        if (resourceInfo && spriteRenderer)
-            spriteRenderer.sprite = resourceInfo.Sprite;
+        if (resourceInfo && SpriteRenderer)
+            SpriteRenderer.sprite = resourceInfo.Sprite;
     }
 }

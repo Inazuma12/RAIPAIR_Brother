@@ -8,7 +8,8 @@ public class BackBlock : DipositeBlock
 
     public override bool Diposide(PickableObject pickableObject)
     {
-         repairableObject = (RepairableObject)pickableObject;
+        ownPickableObject = pickableObject;
+        RepairableObject repairableObject = (RepairableObject)pickableObject;
 
         if (repairableObject)
         {

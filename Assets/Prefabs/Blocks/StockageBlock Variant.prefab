@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _type: 7
   ownPickableObject: {fileID: 0}
+  objectOnStorage: {fileID: 0}
 --- !u!1001 &4656172989889991687
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -81,11 +82,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3542105836921939941, guid: a2d7c98d38c475a42975fc6833886e85,
-        type: 3}
-      propertyPath: type
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 8795853585498554279, guid: a2d7c98d38c475a42975fc6833886e85,
         type: 3}
       propertyPath: m_Materials.Array.size
@@ -101,8 +97,14 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: bd1a788be0182b54bb2c0f29cd69b3a8, type: 2}
+    - target: {fileID: 3542105836921939941, guid: a2d7c98d38c475a42975fc6833886e85,
+        type: 3}
+      propertyPath: type
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 3542105836921939941, guid: a2d7c98d38c475a42975fc6833886e85, type: 3}
+    - {fileID: 6528998156714544836, guid: a2d7c98d38c475a42975fc6833886e85, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: a2d7c98d38c475a42975fc6833886e85, type: 3}
 --- !u!1 &621124353134337461 stripped
 GameObject:

@@ -14,7 +14,21 @@ public class shakeModel : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        pickableObject = GetComponentInParent<StorageBlock>().objectOnStorage;
+        try
+        {
+            pickableObject = GetComponentInParent<PickUpDipositeBlock>().ownPickableObject;
+        }
+        catch (System.Exception)
+        {
+            try
+            {
+                pickableObject = GetComponentInParent<DipositeBlock>().ownPickableObject;
+            }
+            catch (System.Exception)
+            {
+                pickableObject = GetComponentInParent<PickUpBlock>().ownPickableObject;
+            }
+        }
         if (!(wasShake) && pickableObject != null)
         {
             modelTransformBefore = modelToShake.transform.position;

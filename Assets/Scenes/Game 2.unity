@@ -2484,6 +2484,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: a59fffb3b774c744ea5c12a61918a5bb,
         type: 2}
+    - target: {fileID: 9179109024232834912, guid: fc7b4ad1b40ca1d42ba4866c8740e258,
+        type: 3}
+      propertyPath: eventPickUp
+      value: event:/SFX/SFX_Glue_Pick_Up
+      objectReference: {fileID: 0}
+    - target: {fileID: 9179109024232834912, guid: fc7b4ad1b40ca1d42ba4866c8740e258,
+        type: 3}
+      propertyPath: eventdrop
+      value: event:/SFX/SFX_Glue_Droped
+      objectReference: {fileID: 0}
     - target: {fileID: 9179109024986295579, guid: fc7b4ad1b40ca1d42ba4866c8740e258,
         type: 3}
       propertyPath: m_Color.g
@@ -2938,6 +2948,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 8bcdaf644dafe5f4aadb0844069d17b0,
         type: 2}
+    - target: {fileID: 9179109024232834912, guid: fc7b4ad1b40ca1d42ba4866c8740e258,
+        type: 3}
+      propertyPath: eventPickUp
+      value: event:/SFX/SFX_Electronic_circuit_Pick_Up
+      objectReference: {fileID: 0}
+    - target: {fileID: 9179109024232834912, guid: fc7b4ad1b40ca1d42ba4866c8740e258,
+        type: 3}
+      propertyPath: eventdrop
+      value: event:/SFX/SFX_Electronic_circuit_Droped
+      objectReference: {fileID: 0}
     - target: {fileID: 9179109024986295579, guid: fc7b4ad1b40ca1d42ba4866c8740e258,
         type: 3}
       propertyPath: m_Color.r
@@ -3918,6 +3938,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 50dfe81fcb1d5b741b335fc4ca551f73,
         type: 2}
+    - target: {fileID: 9179109024232834912, guid: fc7b4ad1b40ca1d42ba4866c8740e258,
+        type: 3}
+      propertyPath: eventPickUp
+      value: event:/SFX/SFX_Cables_Pick_Up
+      objectReference: {fileID: 0}
+    - target: {fileID: 9179109024232834912, guid: fc7b4ad1b40ca1d42ba4866c8740e258,
+        type: 3}
+      propertyPath: eventdrop
+      value: event:/SFX/SFX_Cables_Droped
+      objectReference: {fileID: 0}
     - target: {fileID: 9179109024986295579, guid: fc7b4ad1b40ca1d42ba4866c8740e258,
         type: 3}
       propertyPath: m_Color.g
@@ -9287,6 +9317,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: c55da4862a50d134496be8f96488b1fa,
         type: 2}
+    - target: {fileID: 9179109024232834912, guid: fc7b4ad1b40ca1d42ba4866c8740e258,
+        type: 3}
+      propertyPath: eventPickUp
+      value: event:/SFX/SFX_Gearing_Pick_Up
+      objectReference: {fileID: 0}
+    - target: {fileID: 9179109024232834912, guid: fc7b4ad1b40ca1d42ba4866c8740e258,
+        type: 3}
+      propertyPath: eventdrop
+      value: event:/SFX/SFX_Electronic_circuit_Droped
+      objectReference: {fileID: 0}
     - target: {fileID: 9179109024986295579, guid: fc7b4ad1b40ca1d42ba4866c8740e258,
         type: 3}
       propertyPath: m_Color.g
@@ -9644,6 +9684,26 @@ PrefabInstance:
       propertyPath: ExitDesk
       value: 
       objectReference: {fileID: 2108644322082477100}
+    - target: {fileID: 9094531243905075506, guid: 61aecbfc03836e44898b0df4a1ae4136,
+        type: 3}
+      propertyPath: angryEvent
+      value: event:/SFX/SFX_Angry_Client
+      objectReference: {fileID: 0}
+    - target: {fileID: 9094531243905075506, guid: 61aecbfc03836e44898b0df4a1ae4136,
+        type: 3}
+      propertyPath: happyEvent
+      value: event:/SFX/SFX_Happy_Client
+      objectReference: {fileID: 0}
+    - target: {fileID: 9094531243905075506, guid: 61aecbfc03836e44898b0df4a1ae4136,
+        type: 3}
+      propertyPath: mediumClient
+      value: event:/SFX/SFX_Medium_Client
+      objectReference: {fileID: 0}
+    - target: {fileID: 9094531243905075506, guid: 61aecbfc03836e44898b0df4a1ae4136,
+        type: 3}
+      propertyPath: newOrderEvent
+      value: event:/SFX/SFX_New_Order
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 61aecbfc03836e44898b0df4a1ae4136, type: 3}
 --- !u!114 &9094531242879002161 stripped

@@ -123,6 +123,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc44da36a39f258438bf6a4d6a540ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  eventPickUp: event:/SFX/SFX_Order_Pick_Up
+  eventdrop: event:/SFX/SFX_Order_Drop
   spriteRenderer: {fileID: 4253409265461007148}
   baseRecipe: {fileID: 11400000, guid: 9b09792fb69e6c245a3f43bc9c2b2ea1, type: 2}
   state: 0
+  repairEvent: event:/SFX/SFX_Repair

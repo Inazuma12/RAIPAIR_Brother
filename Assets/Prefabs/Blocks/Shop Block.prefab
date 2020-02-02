@@ -16,6 +16,7 @@ MonoBehaviour:
   ownPickableObject: {fileID: 9179109024232834912}
   cooldown: 0
   inactived: {r: 0, g: 0, b: 0, a: 1}
+  buyEvent: event:/SFX/SFX_Buy_New_ressource
 --- !u!1001 &4724565798967336311
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -83,16 +84,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8795853585498554279, guid: a2d7c98d38c475a42975fc6833886e85,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 71593b049160b7d408d722135e9bf2b7, type: 2}
     - target: {fileID: 3542105836921939941, guid: a2d7c98d38c475a42975fc6833886e85,
         type: 3}
       propertyPath: type
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 8795853585498554279, guid: a2d7c98d38c475a42975fc6833886e85,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 71593b049160b7d408d722135e9bf2b7, type: 2}
     - target: {fileID: 3657681721249903736, guid: a2d7c98d38c475a42975fc6833886e85,
         type: 3}
       propertyPath: m_Name
@@ -180,6 +181,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 255611602606899430, guid: 42a461fefdf6bad45aec152de086fb3a,
+        type: 3}
+      propertyPath: eventPickUp
+      value: event:/SFX/SFX_Screw_Pick_Up
+      objectReference: {fileID: 0}
+    - target: {fileID: 255611602606899430, guid: 42a461fefdf6bad45aec152de086fb3a,
+        type: 3}
+      propertyPath: eventdrop
+      value: event:/SFX/SFX_Screw_Droped
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 42a461fefdf6bad45aec152de086fb3a, type: 3}

@@ -28,12 +28,15 @@ public class DiagBlock : PickUpDipositeBlock
     {
         if (ownPickableObject == null)
         {
-            FMODUnity.RuntimeManager.PlayOneShot(diagEvent, transform.position);
-            ownPickableObject = pickableObject;
-            ownPickableObject.transform.SetParent(transform);
-            PrintRecipe(pickableObject);
-
-            return true;
+            RepairableObject repairableObject = (RepairableObject)pickableObject;
+            if (repairableObject)
+            {
+                FMODUnity.RuntimeManager.PlayOneShot(diagEvent, transform.position);
+                ownPickableObject = pickableObject;
+                ownPickableObject.transform.SetParent(transform);
+                PrintRecipe(pickableObject);
+                return true;
+            }
         }
         return false;
     }

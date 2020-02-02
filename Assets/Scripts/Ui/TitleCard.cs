@@ -25,6 +25,8 @@ public class TitleCard : AScreen
     private void OnBtnPlay()
     {
         SceneManager.LoadScene(1, LoadSceneMode.Additive);
+       
+
         animator.SetBool("GoOut", true);
         animator.SetBool("GoIn", false);
         animator.SetBool("Idle", false);

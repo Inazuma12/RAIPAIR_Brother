@@ -38,11 +38,25 @@ public class GameManager : MonoBehaviour
         set
         {
             _money = value;
+
+
+            HUD.Instance.Money = _money;
             OnMoneyUpdated?.Invoke(this);
         }
     }
 
-    public float Score => _score;
+    public float Score
+    {
+        get
+        {
+            return _score;
+        }
+        set
+        {
+            _score = value;
+            HUD.Instance.Score = _score;
+        }
+    }
 
     public static GameManager Instance
     {
@@ -55,6 +69,9 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         m_instance = this;
+        HUD.Instance.Money = Money;
+        HUD.Instance.Score = Score;
+
     }
 
     // Update is called once per frame
@@ -91,6 +108,7 @@ public class GameManager : MonoBehaviour
     public void ExitDesk(PickableObject pickableObject)
     {
         Money += 10;
+        Score += 10;
        
     }
 }
